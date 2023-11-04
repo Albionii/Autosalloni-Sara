@@ -27,6 +27,7 @@ header {
     text-decoration: none;
   }
   .nav__links li {
+    align-self: center;
     padding: 0px 20px;
   }
   .nav__links li a {
@@ -37,4 +38,46 @@ header {
   
   .nav__links li a:hover {
     color: #f29339;
+  }
+
+  .search-div{
+    border-radius: 40px;
+    height: 50px;
+    background-color:whitesmoke;
+    
+  }
+
+  .search-div:hover > .search_box{
+    width: 150px;
+    margin-left: 15px;
+
+  }
+
+  .search_box {
+    /* padding: 0, 10px; */
+    margin-top: 16px;
+    transition: 0.6s;
+    border: none;
+    background: none;
+    color: black;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: 15px;
+    margin-left: 5px;
+    width: 0px;
+  }
+
+  .search-logo{
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+    margin-right: 12px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
