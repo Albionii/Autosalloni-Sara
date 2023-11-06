@@ -34,20 +34,50 @@
     <div class="log-in">
       <div class="shadoww">
         <div class="selected"></div>
-        <button class="log-reg-btn">Log in</button>
-        <button class = "log-reg-btn">Register</button>
+        <button class="log-reg-btn" onclick="login()">Log in</button>
+        <button class = "log-reg-btn" onclick="register()">Register</button>
       </div>
-    </div>
+      
+      <br>
+      <form action="loginForm">
+        <input type="text" name="username" class= "login-input" id="username" placeholder="username"><br>
+        <input type="text" name="email" class= "login-input" id="email" placeholder="email">
+
+        <input type="password" name="password" class= "login-input" id="password" placeholder="password">
+        <br>
+  
+        <input type="checkbox" name="remember-me?" id="">
+        <label for="remember-me?">Remember me</label><br>
+  
+        <button id = "submit-btn">Log In</button>  
+      </form>
+
+      </div>
 
   </div>
+  
 
-
-  <!-- <input type="text" name="" id="username">
-  <input type="password" name="" id="password"> -->
 
 
 
   <script>
+    function login(){
+      let divsSelect = document.getElementsByClassName("selected");
+      let divSelect = divsSelect[0];
+      divSelect.style.marginLeft = '0px';
+      let submit = document.getElementById('submit-btn');
+      submit.innerHTML = "Log In";
+      document.getElementById('email').style.display = 'none';
+    }
+
+    function register(){
+      let divsSelect = document.getElementsByClassName("selected");
+      let divSelect = divsSelect[0];
+      divSelect.style.marginLeft = '100px';
+      let submit = document.getElementById('submit-btn');
+      submit.innerHTML = "Register";
+      document.getElementById('email').style.display = 'inline-block';
+    }
 
   </script>
 

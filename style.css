@@ -19,7 +19,13 @@ header {
     align-items: center;
     padding: 30px;
     background-color: #212831;
-  }
+}
+
+/* footer {
+    padding: 30px;
+    background-color: red;
+} */
+
   .nav__links {
     list-style: none;
     display: flex;
@@ -122,16 +128,15 @@ header {
   
 
   .log-reg-btn{
-    padding: 10px 30px;
-    cursor: pointer;
+    padding: 10px 20px;
     background: transparent;
-    border: 0;
-    outline: none;
+    border: 0px;
+    cursor: pointer;
     position: relative;
   }
 
   .shadoww {
-    width: 220px;
+    width: 180px;
     margin: 35px auto;
     position: relative;
     box-shadow: 0 0 20px 9px #ff61241f;
@@ -143,10 +148,31 @@ header {
     top: 0;
     left: 0;
     position: absolute;
-    width: 125px;
+    width: 110px;
     height: 100%;
     background: #f79238;
     border-radius: 30px;
     transition: 0.5s;
     z-index: -1;
+  }
+
+  .login-input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  #email {
+    display: none;
+  }
+
+
+  #submit-btn {
+    width: 200px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background: #f79238;
+    border: none;
+    cursor: pointer;
   }
