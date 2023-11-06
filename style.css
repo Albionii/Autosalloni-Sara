@@ -160,7 +160,7 @@ header {
     width: 200px;
     padding: 10px;
     border-radius: 15px;
-    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   #registerForm{
@@ -193,6 +193,12 @@ header {
     background: #f79238;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease 0s;
+    transition: 0.5s;
+  }
+  .submit-btn:hover{
+    color: wheat;
+    font-size: larger;
   }
 
   
