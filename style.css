@@ -162,12 +162,29 @@ header {
     border-radius: 15px;
   }
 
-  #email {
+  #registerForm{
     display: none;
   }
 
+  #hiddenEye {
+    position: absolute;
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
 
-  #submit-btn {
+  #eyeShown{
+    position: absolute;
+    width: 25px;
+    margin-top: 8.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    visibility: hidden;
+  }
+
+
+  .submit-btn {
     width: 200px;
     margin-top: 20px;
     padding: 15px;
@@ -176,3 +193,5 @@ header {
     border: none;
     cursor: pointer;
   }
+
+  
