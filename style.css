@@ -18,7 +18,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    background-color: #212831;
+    background-color: black;
+    transition: 0.5s;
+}
+
+header:hover {
+  background-color: #252527;
 }
 
 /* footer {
@@ -54,10 +59,11 @@ header {
   .search-div{
     border-radius: 40px;
     height: 50px;
-    background-color:rgb(36, 34, 57);
+    background-color: transparent;
     border: 1px solid;
     border-color: #f29339;
     cursor: pointer;
+    display: flex;
   }
 
   .search-div:hover > .search_box{
@@ -67,7 +73,7 @@ header {
 
   .search_box {
     /* padding: 0, 10px; */
-    margin-top: 16px;
+    margin-top: 15px;
     transition: 0.6s;
     border: none;
     background: none;
@@ -201,4 +207,38 @@ header {
     font-size: larger;
   }
 
+
+
+  .slider-div {
+    position: absolute;
+    width: 100%;
+    height: 83%;
+    background-color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  }
+
+  .slider-div p {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    
+    /* font-family: ; */
+  }
+
   
+
+  #car-slider {
+    display: flex;  
+    height: 100%;
+    /* margin-left: 600px; */
+    /* bottom: -25px; */
+    /* left: 500px; */
+    overflow: hidden;
+
+  }
