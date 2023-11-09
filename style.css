@@ -211,24 +211,25 @@ header:hover {
 
   .slider-div {
     position: absolute;
+    overflow: hidden;
     width: 100%;
-    height: 83%;
+    height: 600px;
     background-color: black;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    align-content: center;
   }
 
   .slider-div p {
+    display: flex;
     color: white;
     font-size: 50px;
-    text-align: center;
     margin-top: 100px;
-    
-    /* font-family: ; */
+    text-align: left;
+    margin-left: 50px;
+    /* text-wrap: nowrap; */
   }
 
   
@@ -236,9 +237,22 @@ header:hover {
   #car-slider {
     display: flex;  
     height: 100%;
-    /* margin-left: 600px; */
+    margin-left: 950px;
     /* bottom: -25px; */
     /* left: 500px; */
-    overflow: hidden;
+    /* overflow: hidden; */
 
   }
+
+  #right-arrow{
+    position: absolute;
+    left: 98%;
+    width: 20px;
+    opacity: 0.2;
+    transition: 0.5s;
+  }
+
+  #right-arrow:hover{
+    opacity: 1;
+  }
+
