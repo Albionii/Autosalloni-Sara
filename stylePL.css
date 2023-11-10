@@ -1,0 +1,132 @@
+.headerContainer,.logoAndCatalog{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: space-between;
+}
+.logoAndCatalog{
+    width: 80%;
+}
+.photos img{
+    max-width: 450px;
+    /* max-height: 236px; */
+}
+.catalog{
+    color: lightskyblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 5px;
+}
+.lista{
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: space-between;
+        list-style-type: none;
+}
+.lista li{
+    margin-right: 10px;
+}
+.bgPhoto{
+    background-image: url(hero.jpg);
+    background-size: 100% 100%;
+    height: 300px;
+}
+.bgPhoto {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+}
+.latestVideos{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: space-between;
+    }
+.latestVideos p{
+    color: lightblue;
+}
+.paragrafi1{
+    font-size: larger; font-weight: bolder; width: 90%;
+}
+.photos{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: space-evenly;
+}
+.rubrika{
+    margin: 30px;
+}
+.views_date{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: space-between;
+    color: lightblue;
+}
+.pages{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: space-between;
+    margin-bottom: 20px;
+}
+footer{
+    background-color: #252527
+}
+.f{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: baseline;
+	align-content: stretch;
+}
+
+.footermain{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+        align-content: stretch;
+}
+.footerleft{
+    max-width: 10%;
+}
+.f h2{
+    color: #f29339;
+}
+.footermain p{
+    color: rgb(119, 119, 119);
+}
+.fundi{
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+        align-content: stretch;
+}
+.fundi p{
+    color: rgb(119, 119, 119);
+}
+button{
+    padding: 3px;
+}
