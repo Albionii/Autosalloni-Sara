@@ -1,0 +1,45 @@
+p, h3, span{
+    color: white;
+}
+h1{
+	color: #f29339;
+}
+h3{
+	color: #f29339;
+}
+
+.teksti{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.tekstiMeFoto{
+	width: 90%;
+	height: 700px;
+	position: absolute;
+	top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border-radius: 10px;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+	background-color: #3d3b3b;
+	
+}
+.tekstiMeFoto span{
+	display: block;
+	max-width: 500px;
+}
+.fotoja{
+	max-width: 700px;
+	border-radius: 10px;
+	content:url(MainPagePhotos/Photo1.jpg);
+}
