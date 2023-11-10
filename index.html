@@ -30,14 +30,24 @@
     </header>
 
     <div class="slider-div">
-      <img src="fotot/car-slider.jpg" alt="car" id="car-slider">
       <div class="text-slider">
-
+        
       </div>
       <p>WITH OVER 10 YEARS
       </p>
+      <img src="fotot/car-slider.jpg" alt="car" id="car-slider">
+      <img src="fotot/right-arrow.png" alt="" id="right-arrow" onclick="rightArrow()">
     </div>
 
+
+
+    <script>
+      function rightArrow(){
+        let car = document.getElementById('car-slider');
+        car.style.transition = '2s'
+        car.style.marginLeft = '50px';
+      }
+    </script>
     
 </body>
 </html>
