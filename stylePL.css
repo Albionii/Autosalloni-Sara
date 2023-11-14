@@ -68,6 +68,16 @@
 }
 .rubrika{
     margin: 30px;
+    margin-left: 57px;
+    
+}
+.rubrika img{
+    border-radius: 10px;
+    -webkit-box-shadow: 0 40px 20px -2px rgb(60, 60, 60);
+    transition: all .2s ease-in-out;
+}
+.rubrika img:hover{
+    max-width: 500px;
 }
 .views_date{
 	display: flex;
@@ -131,14 +141,30 @@ button{
     padding: 3px;
 }
 #options{
-    max-width: 15%;
+    width: 15%;
+    position: absolute;
+    margin-top: 3%;
+    transition: all .2s ease-in-out;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}
+#mainDiv{
+    margin-left: 10%;
+}
+.toggleOn{
+
+}
+.toggleOff{
+
 }
 #options p{
     margin-left: 5%;
 }
 #filterimg{
-    max-height: 5%;
-    display: block;
+    max-height: 25px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 #options input{
     background-color: #252527;
@@ -149,4 +175,25 @@ button{
 }
 #options input::placeholder{
     color: white;
+}
+.views_date p{
+    font-size: large;
+    margin-top: 5px;
+}
+#menu{
+    left: 20px;
+    font-size: 3em;
+    font-weight: 800;
+    z-index: 111;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    transition: all 0.5s;
+    -webkit-transition: all 0.25s;
+    position: absolute;
+}
+
+#menu:hover{
+    transform: rotate(90deg);
+    color: #FF9900;
 }

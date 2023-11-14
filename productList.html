@@ -31,14 +31,18 @@
     </header>
     </header>
     <div id="sideBar">
-        <img src="fotot/filter.png" alt="filterImg" onclick="filter()" style="max-width: 13%; margin-top: 5%;">
+        <div id = "menu" onclick="filter()">|||</div>
         <div id="options">
         <p style="color: white;">qmimi:</p>
         <input type="text" name="" class="inputLook" placeholder="From">
         <input type="text" name="" class="inputLook" placeholder="To">
+        <br>
+        <p style="color: white;">kilometrat:</p>
+        <input type="text" name="" class="inputLook" placeholder="From">
+        <input type="text" name="" class="inputLook" placeholder="To">
     </div>
     </div>
-    <main style="margin-left: 15%;">
+    <main id="mainDiv">
         <div class="photos">
             <div class="rubrika">
                 <img src="MainPagePhotos/Photo1.jpg" alt="" class="img">
@@ -144,10 +148,14 @@
         <script>
             function filter(){
                 const options = document.getElementById("options");
+                const main = document.getElementById("mainDiv");
                 if(options.style.display === "none"){
                     options.style.display = "";
+                    main.style.marginLeft = "10%";
+
                 }else{
                 options.style.display = "none";
+                main.style.marginLeft = "0%";
             }
                 
             }
