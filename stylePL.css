@@ -130,3 +130,23 @@ footer{
 button{
     padding: 3px;
 }
+#options{
+    max-width: 15%;
+}
+#options p{
+    margin-left: 5%;
+}
+#filterimg{
+    max-height: 5%;
+    display: block;
+}
+#options input{
+    background-color: #252527;
+    max-width: 40%;
+    margin-left: 5%;
+    border: none;
+    
+}
+#options input::placeholder{
+    color: white;
+}
