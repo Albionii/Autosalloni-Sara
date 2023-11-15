@@ -33,11 +33,21 @@
       <div class="text-slider">
         
       </div>
-      <p>WITH OVER 20 YEARS OF EXPERIENCE
-      </p>
+      <p>WITH OVER 20 YEARS OF EXPERIENCE</p>
+      <!-- <p>WITH OVER 0 YEARS OF EXPERIENCE(clickbait)</p> -->
       <img src="fotot/car-slider.jpg" alt="car" id="car-slider" style="
       user-select: none;">
       <img src="fotot/right-arrow.png" alt="" id="right-arrow" onclick="rightArrow()">
+
+    </div>
+
+    <div class="div-dots">
+      <span class = "dot" id = "dot1" onclick="leftCar()"></span>
+      <span class = "dot" id = "dot2" onclick="rightCar()"></span>
+    </div>
+
+    <div class="introduction">
+      
     </div>
 
 
@@ -48,6 +58,19 @@
         car.style.transition = '2s'
         car.style.marginLeft = '50px';
       }
+
+
+      function rightCar(){
+        document.getElementById("dot1").style.backgroundColor = "black";
+        document.getElementById("dot2").style.backgroundColor = "white";
+      }
+
+      function leftCar(){
+        document.getElementById("dot2").style.backgroundColor = "black";
+        document.getElementById("dot1").style.backgroundColor = "white";
+      }
+
+
     </script>
     
 </body>
