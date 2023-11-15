@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a class="logo" href="index.html"><img src="fotot/Sara-logo.png" alt="logo"></a>
+        <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="index.html">HOME</a></li>
@@ -30,21 +30,20 @@
     </header>
 
     <div class="slider-div">
-      <div class="text-slider">
+      <!-- <div class="text-slider">
         
+      </div> -->
+      <p id="p-slider">WITH OVER 20 YEARS OF EXPERIENCE</p>
+      <!-- <div class="car-div"> -->
+        <img src="fotot/car-slider.jpg" alt="car" id="car-slider">
+      <!-- </div> -->
+
+      <div class="div-dots">
+        <span class = "dot" id = "dot1" onclick="leftCar()"></span>
+        <span class = "dot" id = "dot2" onclick="rightCar()"></span>
       </div>
-      <p>WITH OVER 20 YEARS OF EXPERIENCE</p>
-      <!-- <p>WITH OVER 0 YEARS OF EXPERIENCE(clickbait)</p> -->
-      <img src="fotot/car-slider.jpg" alt="car" id="car-slider" style="
-      user-select: none;">
-      <img src="fotot/right-arrow.png" alt="" id="right-arrow" onclick="rightArrow()">
-
     </div>
 
-    <div class="div-dots">
-      <span class = "dot" id = "dot1" onclick="leftCar()"></span>
-      <span class = "dot" id = "dot2" onclick="rightCar()"></span>
-    </div>
 
     <div class="introduction">
       
@@ -53,16 +52,15 @@
 
 
     <script>
-      function rightArrow(){
-        let car = document.getElementById('car-slider');
-        car.style.transition = '2s'
-        car.style.marginLeft = '50px';
-      }
-
 
       function rightCar(){
         document.getElementById("dot1").style.backgroundColor = "black";
         document.getElementById("dot2").style.backgroundColor = "white";
+        let p = document.getElementById("p-slider").style; 
+        // p.transition = "0.5s"
+        p.display = "none";
+        let car = document.getElementById("car-slider").style;
+        // car.marginRight = "700px";
       }
 
       function leftCar(){
