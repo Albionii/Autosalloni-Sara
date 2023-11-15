@@ -141,21 +141,23 @@ button{
     padding: 3px;
 }
 #options{
+    opacity: 1;
+    display: block;
+    left: -300px;
     width: 15%;
     position: absolute;
     margin-top: 3%;
-    transition: all .2s ease-in-out;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+#options.slideIn{
+    opacity: 1;
+    left: 0px;
 }
 #mainDiv{
-    margin-left: 10%;
-}
-.toggleOn{
-
-}
-.toggleOff{
-
+    margin-left: 0%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 #options p{
     margin-left: 5%;
@@ -181,6 +183,7 @@ button{
     margin-top: 5px;
 }
 #menu{
+    margin-top: 8px;
     left: 20px;
     font-size: 3em;
     font-weight: 800;
@@ -196,4 +199,7 @@ button{
 #menu:hover{
     transform: rotate(90deg);
     color: #FF9900;
+}
+#mainDiv.enterMain{
+    margin-left: 10%;
 }
