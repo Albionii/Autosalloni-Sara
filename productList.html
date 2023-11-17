@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a class="logo" href="index.html"><img src="fotot/Sara-logo.png" alt="logo"></a>
+        <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="index.html">HOME</a></li>
@@ -29,17 +29,28 @@
             </ul>
         </nav>
     </header>
-    </header>
     <div id="sideBar">
         <div id = "menu" onclick="filter()">|||</div>
         <div id="options">
-        <p style="color: white;">qmimi:</p>
-        <input type="text" name="" class="inputLook" placeholder="From">
-        <input type="text" name="" class="inputLook" placeholder="To">
+        <p>qmimi:</p>
+        <input type="number" name="" class="inputLook" placeholder="From">
+        <input type="number" name="" class="inputLook" placeholder="To">
         <br>
-        <p style="color: white;">kilometrat:</p>
-        <input type="text" name="" class="inputLook" placeholder="From">
-        <input type="text" name="" class="inputLook" placeholder="To">
+        <p>kilometrat:</p>
+        <input type="number" name="" class="inputLook" placeholder="From">
+        <input type="number" name="" class="inputLook" placeholder="To">
+        <p>Viti i prodhimit:</p>
+        <input type="number" name="" id="inputLook" placeholder="From">
+        <p> RKS: </p>
+        <input type="radio" name="drone" id="RksPo" value="Po">
+        <label for="RksPo" style="color: white;">Po</label>
+        <input type="radio" name="drone" id="RksJo" value="Jo">
+        <label for="RksJo" style="color: white;">Jo</label>
+        <p> Shpejtesite: </p>
+        <select name="Shpejtesite" id="Shpejtesite">
+            <option value="Automatik">Automatik</option>
+            <option value="Manual">Manual</option>
+        </select>
     </div>
     </div>
     <main id="mainDiv">
