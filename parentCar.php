@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="parentStyle.css">
 </head>
 <body>
+    <?php
+      $conn = require __DIR__ . '/LidhjaMeDatabaze.php';
 
+
+    ?>
     <header>
         <a class="logo" href="index.html"><img src="fotot/Sara-logo.png" alt="logo"></a>
         <nav>
@@ -33,15 +37,27 @@
         <main>
           <div class="tekstiMeFoto">  
             <div class="teksti">
-              <h1 style="display: inline;">Titulli</h1>
-              <span>MainText from jaiosjd ifrom  ifrom jaiosjd ioasjd ifrom jaiosjd ioasjd i  oasjd i</span>
-              <h3>Make Year,</h3>
-              <h3>PRICE FROM DATABASE</h3>
+              <?php
+                
+                  if(isset($_GET['product'])){
+                    $product = $_GET['product'];
+                    $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
+                    $result = $conn->query($sql);
+                    $row = $result->fetch_assoc();
+                  }
+
+              ?>
+              <h1 style="display: inline;"><?= $row['titulli'] ?></h1>
+              <span><?= $row['mainText'] ?></span>
+              <h3><?= $row['vitiProdhimit']?></h3>
+              <h3><?= $row['cmimi'] ?>$</h3>
               
             </div>
-              <div class="fotoja">
-                <img class="" src="" alt="" style="z-index: -1;">
-            </div>
+              <!-- <div class="fotoja"> -->
+                <img class="" src="<?= $row['fotoPath']?>" alt="" style="
+	max-width: 700px;
+	border-radius: 10px;">
+            <!-- </div> -->
           </div>
           </main>
     

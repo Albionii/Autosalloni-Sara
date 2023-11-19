@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<?php
+
+    $conn = require __DIR__ . '/LidhjaMeDatabaze.php';
+
+?>
+
     <header>
         <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
         <nav>
@@ -55,6 +62,31 @@
     </div>
     <main id="mainDiv">
         <div class="photos">
+        <?php
+
+            $sql = "SELECT * FROM productListData";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<div class='rubrika'>
+                            <a href = 'parentCar.php?product=" . $row['nrShasise'] . "' >
+                            <img src = '" . $row['fotoPath'] . "' alt = 'skaFoto' class = 'img'></a>
+                            <div class = 'views_date'> 
+                                <p>" . $row['registration_date'] . "</p>
+                                <p style = 'color: #f29339'>" . $row['cmimi'] . "$ </p>
+                                <p>1 views</p>
+                            
+                            </div>
+                    
+                    
+                    
+                    </div>";
+                }
+                } 
+            
+        
+        ?>
             <div class="rubrika">
                 <img src="MainPagePhotos/Photo1.jpg" alt="" class="img">
                 <div class="views_date">
@@ -157,6 +189,9 @@
         </div>
         </main>
         <script type="text/javascript" src="productListScript.js"></script>
+        <script>
+            console.log('hello world');
+        </script>
 </body>
 
 </html>
