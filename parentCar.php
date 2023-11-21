@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="parentStyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
@@ -14,7 +14,7 @@
 
     ?>
     <header>
-        <a class="logo" href="index.html"><img src="fotot/Sara-logo.png" alt="logo"></a>
+    <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="index.html">HOME</a></li>
@@ -54,9 +54,7 @@
               
             </div>
               <!-- <div class="fotoja"> -->
-                <img class="" src="<?= $row['fotoPath']?>" alt="" style="
-	max-width: 700px;
-	border-radius: 10px;">
+                <img class="" src="<?= $row['fotoPath']?>" alt="">
             <!-- </div> -->
           </div>
           </main>

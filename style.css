@@ -175,6 +175,7 @@ header:hover {
     margin-top: 10px;
     margin-left: 5px;
     cursor: pointer;
+    visibility: visible;
   }
 
   #eyeShown{
@@ -383,4 +384,63 @@ header:hover {
     }
 
 
+  }
+  @media (max-width : 500px) {
+    .nav__links li a {
+      font-size: 5px;
+      transition: 0.2s;
+    }
+
+    .user-logo {
+      margin-top: 3px;
+      width: 10px;
+      height: auto;
+      padding: 3px;
+      transition: 0.2s;
+    }
+
+    .logo {
+      max-width: 50px;
+      max-height: 40px;
+      transition: 0.2s;
+    }
+
+    .search-div {
+      width: 25px;
+      /* height: 25px; */
+      transition: 0.2s;
+    }
+
+    .search-logo{
+      margin-left: 2px;
+      margin-top: 7px;
+      margin-right: 5px;
+      transition: 0.2s;
+      
+    }
+
+    .search-div:hover > .search_box{
+      width: 20px;
+      font-size: 10px;
+      transition: 0.2s;
+      /* margin-left: 15px; */
+    }
+
+    #p-slider {
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    #car-slider {
+      height: 30%;
+      transition: 0.2s;
+    }
+
+
+  }
+  @media (pointer:none), (pointer:coarse){
+    .nav__links li a:hover {
+      color: #f29339;
+    }
+    
   }
