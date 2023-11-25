@@ -10,7 +10,7 @@
 <body>
 
 <?php
-
+    
     $conn = require __DIR__ . '/LidhjaMeDatabaze.php';
 
 ?>
@@ -72,7 +72,7 @@
                     echo "<div class='rubrika'>
                             <a href = 'parentCar.php?product=" . $row['nrShasise'] . "' >
                             <img src = '" . $row['fotoPath'] . "' alt = 'skaFoto' class = 'img'></a>
-                            <div class = 'views_date'> 
+                             <div class = 'views_date'> 
                                 <p>" . $row['registration_date'] . "</p>
                                 <p style = 'color: #f29339'>" . $row['cmimi'] . "$ </p>
                                 <p>1 views</p>
