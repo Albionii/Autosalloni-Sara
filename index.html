@@ -36,6 +36,8 @@
       <p id="p-slider">WITH OVER 20 YEARS OF EXPERIENCE</p>
       <!-- <div class="car-div"> -->
         <img src="fotot/car-slider.jpg" alt="car" id="car-slider">
+
+        <p id = "p-slider2">WE GIVE YOU TRUST AND COMFORT</p>
       <!-- </div> -->
 
       <div class="div-dots">
@@ -52,7 +54,33 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.2537392624895!2d21.154287375695997!3d42.42233363116564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547f6d26de7507%3A0xb57f0fddeda9ad59!2sAutosallon%20%22Sara%22!5e0!3m2!1sen!2s!4v1700997693167!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
+
+        <div class="serviceDiv">
+
+          <p>OUR SERVICES</p>
+          <div class="services">
+            <!-- <p>OUR SERVICES</p> -->
+            <div class="ser">
+              <img src="fotot/services/3.png" alt="" class="servImg">
+              <p>Beyond Transportation: Experience the Journey with Our Premium Rentals</p>
+            </div>
+            <div class="ser">
+              <img src="fotot/services/2.png" alt="" class="servImg">
+              <p>Unleash Power, Elegance, and Precision: Your Journey Starts with a Brand New Chapter</p>
+            </div>
+            <div class="ser">
+              <img src="fotot/services/1.png" alt="" class="servImg">
+              <p>A Decade of Confidence: Our 10-Year Guarantee for Enduring Quality</p>
+            </div>
+          </div>
+        </div>
         
+       
+
+        <div class="trend">
+
+        </div>
+
       </div>
     </div>
 
@@ -67,7 +95,11 @@
         // p.display = "none";
         let car = document.getElementById("car-slider").style;
         car.marginRight = "50%";
-        p.marginLeft = "-50%";
+        // p.marginLeft = "-50%";
+        p.display = "none";
+        setTimeout(() =>{
+          document.getElementById("p-slider2").style.display = "flex"
+        }, 2000)
         
         // p.marginRight = "700px";
       }
