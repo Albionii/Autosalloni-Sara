@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detyra 4</title>
-    <link rel="stylesheet" href="stylePL.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylePL.css">
 </head>
 <body>
 
@@ -14,7 +14,6 @@
     $conn = require __DIR__ . '/LidhjaMeDatabaze.php';
 
 ?>
-
     <header>
         <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
         <nav>
@@ -36,6 +35,10 @@
             </ul>
         </nav>
     </header>
+    <div class="test">
+
+    <img src="parentCarPhotos/NavBarPush.jpg" class="fakePhoto">
+    </div>
     <div id="sideBar">
         <div id = "menu" onclick="filter()">|||</div>
         <div id="options">
@@ -91,7 +94,7 @@
                 <img src="MainPagePhotos/Photo1.jpg" alt="" class="img">
                 <div class="views_date">
                     <p>24 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
+                    <p style="color: #f29339;">13,000$</p>
                     <p>10,460 Views</p>
                 </div>
             </div>
@@ -99,7 +102,7 @@
                 <img src="MainPagePhotos/Photo2.jpg" alt="" class="img">
                 <div class="views_date">
                     <p>22 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
+                    <p style="color: #f29339;">13,000$</p>
                     <p>14,502 Views</p>
                 </div>
             </div>
@@ -131,7 +134,7 @@
                 <img src="MainPagePhotos/Photo6.jpg" alt="" class="img">
                 <div class="views_date">
                     <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
+                    <p style="color: #f29339;">13,800$</p>
                     <p>16,100 Views</p>
                 </div>
             </div>
