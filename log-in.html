@@ -42,8 +42,9 @@
       <form action="loginForm" id = "loginForm">
         <input type="text" name="username" class= "login-input" id="usernameLogin" placeholder="username"><br>
         <input type="password" name="password" class= "login-input" id="passwordLogin" placeholder="password">
-        <img src="fotot/pass-hide.png" alt="can't see" id="hiddenEye" onclick="eyeHidden()">
-        <img src="fotot/pass-unhide.png" alt="can see" id="eyeShown" onclick="eyeOfSauron()">
+        
+        <img src="fotot/pass-hide.png" alt="can't see" id="hiddenEyeL" onclick="eyeHidden(this)">
+        <img src="fotot/pass-unhide.png" alt="can see" id="eyeShownL" onclick="eyeOfSauron(this)">
         <br>
   
         <input type="checkbox" name="remember-me?" >
@@ -56,6 +57,9 @@
         <input type="text" name="username" class= "login-input" id="usernameRegister" placeholder="username"><br>
         <input type="text" name="email" class= "login-input" id="email" placeholder="email">
         <input type="password" name="password" class= "login-input" id="passwordRegister" placeholder="password">
+        <img src="fotot/pass-hide.png" alt="can't see" id="hiddenEyeR" onclick="eyeHidden(this)">
+        <img src="fotot/pass-unhide.png" alt="can see" id="eyeShownR" onclick="eyeOfSauron(this)">
+        
         <br>
   
         <input type="checkbox" name="remember-me?" id="">
@@ -65,7 +69,6 @@
       </form>
 
       </div>
-v
   </div>
   
 
@@ -85,6 +88,7 @@ v
     }
 
     function register(){
+  
       let divsSelect = document.getElementsByClassName("selected");
       let divSelect = divsSelect[0];
       divSelect.style.marginLeft = '50%';  
@@ -92,18 +96,29 @@ v
       document.getElementById('loginForm').style.display = 'none';
     }
 
-    function eyeHidden(){
-      document.getElementById('passwordLogin').type = 'text';
-      let imgsHidden = document.getElementById('hiddenEye');
-      imgsHidden.style.visibility = 'hidden';
-      document.getElementById('eyeShown').style.visibility = 'visible';
+    function eyeHidden(eye){
+      if (eye.id == "hiddenEyeL") {
+        document.getElementById('passwordLogin').type = 'text';
+        eye.style.visibility = 'hidden';
+        document.getElementById('eyeShownL').style.visibility = 'visible';
+
+      }else {
+        document.getElementById('passwordRegister').type = 'text';
+        eye.style.visibility = 'hidden';
+        document.getElementById('eyeShownR').style.visibility = 'visible';
+      }
     }
     
-    function eyeOfSauron(){
-      document.getElementById('passwordLogin').type = 'password';
-      let imgsHidden = document.getElementById('hiddenEye');
-      imgsHidden.style.visibility = 'visible';
-      document.getElementById('eyeShown').style.visibility = 'hidden';
+    function eyeOfSauron(eye){
+      if (eye.id == "eyeShownL"){
+        document.getElementById('passwordLogin').type = 'password';
+        eye.style.visibility = 'hidden';
+        document.getElementById('hiddenEyeL').style.visibility = 'visible';
+      }else {
+        document.getElementById('passwordRegister').type = 'password';
+        eye.style.visibility = 'hidden';
+        document.getElementById('hiddenEyeR').style.visibility = 'visible';
+      }
     }
 
 

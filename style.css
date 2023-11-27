@@ -190,7 +190,7 @@ header:hover {
     display: none;
   }
 
-  #hiddenEye {
+  #hiddenEyeL {
     position: absolute;
     width: 25px;
     margin-top: 10px;
@@ -199,7 +199,24 @@ header:hover {
     visibility: visible;
   }
 
-  #eyeShown{
+  #eyeShownL{
+    position: absolute;
+    width: 25px;
+    margin-top: 8.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  #hiddenEyeR {
+    position: absolute;
+    width: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  #eyeShownR{
     position: absolute;
     width: 25px;
     margin-top: 8.5px;
@@ -564,11 +581,19 @@ header:hover {
       font-size: 8px;
     }
 
-    #hiddenEye {
+    #hiddenEyeL {
       width: 15px;
     }
   
-    #eyeShown{
+    #eyeShownL{
+      width: 15px;
+    }
+    
+    #hiddenEyeR {
+      width: 15px;
+    }
+  
+    #eyeShownR{
       width: 15px;
     }
 
