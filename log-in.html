@@ -73,25 +73,23 @@ v
 
 
   <script>
-    
-    let loginNow = true;
+
+
 
     function login(){
       let divsSelect = document.getElementsByClassName("selected");
       let divSelect = divsSelect[0];
-      divSelect.style.marginLeft = '0px';
+      divSelect.style.marginLeft = '0%';
       document.getElementById('registerForm').style.display = 'none';
-      document.getElementById('loginForm').style.display = 'inline-block';
-      loginNow = true;
+      document.getElementById('loginForm').style.display = 'inline';
     }
 
     function register(){
       let divsSelect = document.getElementsByClassName("selected");
       let divSelect = divsSelect[0];
-      divSelect.style.marginLeft = '100px';  
-      document.getElementById('registerForm').style.display = 'inline-block';
+      divSelect.style.marginLeft = '50%';  
+      document.getElementById('registerForm').style.display = 'inline';
       document.getElementById('loginForm').style.display = 'none';
-      loginNow = false;
     }
 
     function eyeHidden(){
