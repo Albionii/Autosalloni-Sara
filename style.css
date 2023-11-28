@@ -149,8 +149,7 @@ header:hover {
   
 
   .log-reg-btn{
-    padding: 5.5% 11.11%;
-    /* padding: 10px 20px; */
+    padding: 5.5% 12%;
     background: transparent;
     border: 0px;
     cursor: pointer;
@@ -170,7 +169,7 @@ header:hover {
     top: 0;
     left: 0;
     position: absolute;
-    width: 50%;
+    width: 55%;
     height: 100%;
     background: #f79238;
     border-radius: 30px;
@@ -588,7 +587,7 @@ header:hover {
     #eyeShownL{
       width: 15px;
     }
-    
+
     #hiddenEyeR {
       width: 15px;
     }

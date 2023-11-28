@@ -85,15 +85,29 @@
       divSelect.style.marginLeft = '0%';
       document.getElementById('registerForm').style.display = 'none';
       document.getElementById('loginForm').style.display = 'inline';
+      perdoruesi.style.border = "2px solid black";
+      fjalekalimi.style.border = "2px solid black";
+      emailin.style.border = "2px solid black";
+      perdoruesi.value = "";
+      fjalekalimi.value = "";
+      emailin.value = "";
+      
+    
     }
 
     function register(){
   
       let divsSelect = document.getElementsByClassName("selected");
       let divSelect = divsSelect[0];
-      divSelect.style.marginLeft = '50%';  
+      divSelect.style.marginLeft = '45%';  
       document.getElementById('registerForm').style.display = 'inline';
       document.getElementById('loginForm').style.display = 'none';
+      perdoruesiLogin.style.border = "2px solid black";
+      fjalekalimiLogin.style.border = "2px solid black";
+      perdoruesiLogin.value = "";
+      fjalekalimiLogin.value = "";
+    
+
     }
 
     function eyeHidden(eye){
