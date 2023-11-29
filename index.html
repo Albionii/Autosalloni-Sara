@@ -108,14 +108,22 @@
               <p>Our company is on of the best if not the best because we made it. Noice</p>
             </div>
             <div class="footerDiv">
-              <a class="titleFooter">Follow Us</a>
+              <a class="titleFooter">Contact Us</a>
             </div>
             <div class="footerDiv">
-              <a class="titleFooter">Adress</a>
+              <a class="titleFooter">Follow Us</a>
+              <div class="social">
+                <a href="#"><img src="fotot/social/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="fotot/social/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="fotot/social/whatsup.png" alt="whatsup"></a>
+              </div>
             </div>
           </div>
 
-          <div class="downDiv">Copyright</div>
+          <div class="downDiv">
+            <p>Copyright © 2023 | All Rights Reserved</p>
+            <p>Designed by Abdusamed Beqiri and Albion Qerreti</p>
+          </div>
         </footer>
       </div>
       
@@ -129,27 +137,27 @@
         document.getElementById("dot1").style.backgroundColor = "black";
         document.getElementById("dot2").style.backgroundColor = "white";
         let p = document.getElementById("p-slider").style; 
-        // p.display = "none";
         let car = document.getElementById("car-slider").style;
         car.marginRight = "50%";
-        // p.marginLeft = "-50%";
         p.display = "none";
 
-
-
-
-
-        setTimeout(() =>{
-          document.getElementById("p-slider2").style.display = "flex"
-        }, 2000)
-        
-        // p.marginRight = "700px";
       }
 
       function leftCar(){
         document.getElementById("dot2").style.backgroundColor = "black";
         document.getElementById("dot1").style.backgroundColor = "white";
       }
+
+      let inicialNavSize = document.getElementsByTagName('header')[0].style.height;
+      window.addEventListener('scroll', () => {
+        if (pageYOffset > 600) {
+          document.getElementsByTagName('header')[0].style.height = '30px';        
+        }
+        else {
+          document.getElementsByTagName('header')[0].style.height = inicialNavSize;
+          document.getElementsByTagName('header')[0].style.backgroundColor = 'black'  
+        }
+      })
 
 
     </script>
