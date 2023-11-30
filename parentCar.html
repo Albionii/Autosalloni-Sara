@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="parentStyle.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- slick slideshow image css  -->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slideStyle.css">
+
+    <!-- slick JS slider  -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src = "slick/slick.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+   
+    <!-- initialize -->
+    <script>
+      $(document).ready(function(){
+      $('.product-slider').slick({
+        infinite: true,
+	      dots: true,
+    	  arrows: true,
+        slidesToShow: 3,
+        centerMode: true,
+});
+});
+
+
+    </script>
+</head>
+<body>
+    <header>
+    <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="productList.php">PRODUCTS</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li>
+                  <div class = "search-div">
+                    <input type="text" class="search_box" placeholder="Search here">
+                    <img src="fotot/search_logo.png" alt="serach box logo" class="search-logo">
+                  </div>
+                </li>
+                <li>
+                  <a href="log-in.html">
+                    <img src="fotot/user-logo.png" alt="user" class="user-logo">
+                  </a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+        <main>
+        <div id = "imageWholeScreen" onclick = "clearImage()">
+      </div>
+          <div class="tekstiMeFoto">  
+            <div class="teksti">
+              <h1 style="display: inline;">Mercedes-Benz E-Class 250 2.2d Saloon</h1>
+              <span>The fourth-generation Mercedes-Benz E-Class saloon, known to enthusiasts as the Mercedes E-Class W212, came as a bit of shock when first revealed. The angular headlights were a big departure from the rounded model that came before, but many buyers quickly came to love this more athletic elegance and were soon won over by its impressive blend of luxury and refinement, regardless.
+
+                Over time, the W212 E-Class has also proven to be a generally reliable machine, capable of high mileages if well looked after.</span>
+              <h3>Viti: 2010</h3>
+              <h3>Cmimi: 13.900$</h3>
+              
+            </div>
+              <!-- <div class="fotoja"> -->
+                <img class="" src="parentCarPhotos/SlideShowTest/w212-2.jpg" alt="">
+            <!-- </div> -->
+            <div class = "product-slider">  
+                      <div class = "slide">
+                        <img src="parentCarPhotos/SlideShowTest/w212-1.jpg" alt="" onclick="openImage('parentCarPhotos/SlideShowTest/w212-1.jpg')">
+                        </div>
+                        <div class = "slide">
+                          <img src="parentCarPhotos/SlideShowTest/w212-4.jpg" alt="" onclick="openImage('parentCarPhotos/SlideShowTest/w212-4.jpg')">
+                        </div>
+                        <div class = "slide">
+                        <img src="parentCarPhotos/SlideShowTest/w212-3.jpg" alt="" onclick="openImage('parentCarPhotos/SlideShowTest/w212-3.jpg')">
+                        </div>
+                        <div class = "slide">
+                          <img src="parentCarPhotos/SlideShowTest/w212-5.jpg" alt="" onclick="openImage('parentCarPhotos/SlideShowTest/w212-5.jpg')">
+                        </div>
+                        
+            </div>
+          </div>
+
+          
+          </div>
+          
+          </main>
+
+          
+          <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>

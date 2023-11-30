@@ -8,11 +8,11 @@
 </head>
 <body>
   <header>
-    <a class="logo" href="index.html"><img src="fotot/Sara-logo.png" alt="logo"></a>
+    <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
     <nav>
         <ul class="nav__links">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="productList.html">PRODUCTS</a></li>
             <li><a href="#">ABOUT US</a></li>
             <li>
               <div class = "search-div">
@@ -42,33 +42,33 @@
       <form action="loginForm" id = "loginForm">
         <input type="text" name="username" class= "login-input" id="usernameLogin" placeholder="username"><br>
         <input type="password" name="password" class= "login-input" id="passwordLogin" placeholder="password">
-        <img src="fotot/pass-hide.png" alt="can't see" id="hiddenEye" onclick="eyeHidden()">
-        <img src="fotot/pass-unhide.png" alt="can see" id="eyeShown" onclick="eyeOfSauron()">
+        
+        <img src="fotot/pass-hide.png" alt="can't see" id="hiddenEyeL" onclick="eyeHidden(this)">
+        <img src="fotot/pass-unhide.png" alt="can see" id="eyeShownL" onclick="eyeOfSauron(this)">
         <br>
   
         <input type="checkbox" name="remember-me?" >
         <label for="remember-me?">Remember me</label><br>
   
-        <button class="submit-btn" id = "login-btn">Log In</button>  
+        <button class="submit-btn" id = "login-btn" type="submit">Log In</button>  
       </form>
 
       <form action="registerForm" id = "registerForm">
         <input type="text" name="username" class= "login-input" id="usernameRegister" placeholder="username"><br>
         <input type="text" name="email" class= "login-input" id="email" placeholder="email">
         <input type="password" name="password" class= "login-input" id="passwordRegister" placeholder="password">
-        <!-- <img src="fotot/pass-hide.png" alt="can't see" onclick="eyeHidden()">
-        <img src="fotot/pass-unhide.png" alt="can see" onclick="eyeOfSauron()"> -->
+        <img src="fotot/pass-hide.png" alt="can't see" id="hiddenEyeR" onclick="eyeHidden(this)">
+        <img src="fotot/pass-unhide.png" alt="can see" id="eyeShownR" onclick="eyeOfSauron(this)">
         
         <br>
   
         <input type="checkbox" name="remember-me?" id="">
-        <label for="remember-me?">Remember me</label><br>
+        <label for="remember-me?">Keep me logged in</label><br>
   
-        <button class="submit-btn" id = "register-btn">Register</button>  
+        <button class="submit-btn" id = "register-btn" type="submit">Register</button>  
       </form>
 
       </div>
-v
   </div>
   
 
@@ -76,40 +76,120 @@ v
 
 
   <script>
-    
-    let loginNow = true;
+
+
 
     function login(){
       let divsSelect = document.getElementsByClassName("selected");
       let divSelect = divsSelect[0];
-      divSelect.style.marginLeft = '0px';
+      divSelect.style.marginLeft = '0%';
       document.getElementById('registerForm').style.display = 'none';
-      document.getElementById('loginForm').style.display = 'inline-block';
-      loginNow = true;
+      document.getElementById('loginForm').style.display = 'inline';
+      perdoruesi.style.border = "2px solid black";
+      fjalekalimi.style.border = "2px solid black";
+      emailin.style.border = "2px solid black";
+      perdoruesi.value = "";
+      fjalekalimi.value = "";
+      emailin.value = "";
+      
+    
     }
 
     function register(){
+  
       let divsSelect = document.getElementsByClassName("selected");
       let divSelect = divsSelect[0];
-      divSelect.style.marginLeft = '100px';  
-      document.getElementById('registerForm').style.display = 'inline-block';
+      divSelect.style.marginLeft = '45%';  
+      document.getElementById('registerForm').style.display = 'inline';
       document.getElementById('loginForm').style.display = 'none';
-      loginNow = false;
+      perdoruesiLogin.style.border = "2px solid black";
+      fjalekalimiLogin.style.border = "2px solid black";
+      perdoruesiLogin.value = "";
+      fjalekalimiLogin.value = "";
+    
+
     }
 
-    function eyeHidden(){
-      document.getElementById('passwordLogin').type = 'text';
-      let imgsHidden = document.getElementById('hiddenEye');
-      imgsHidden.style.visibility = 'hidden';
-      document.getElementById('eyeShown').style.visibility = 'visible';
+    function eyeHidden(eye){
+      if (eye.id == "hiddenEyeL") {
+        document.getElementById('passwordLogin').type = 'text';
+        eye.style.visibility = 'hidden';
+        document.getElementById('eyeShownL').style.visibility = 'visible';
+
+      }else {
+        document.getElementById('passwordRegister').type = 'text';
+        eye.style.visibility = 'hidden';
+        document.getElementById('eyeShownR').style.visibility = 'visible';
+      }
     }
     
-    function eyeOfSauron(){
-      document.getElementById('passwordLogin').type = 'password';
-      let imgsHidden = document.getElementById('hiddenEye');
-      imgsHidden.style.visibility = 'visible';
-      document.getElementById('eyeShown').style.visibility = 'hidden';
+    function eyeOfSauron(eye){
+      if (eye.id == "eyeShownL"){
+        document.getElementById('passwordLogin').type = 'password';
+        eye.style.visibility = 'hidden';
+        document.getElementById('hiddenEyeL').style.visibility = 'visible';
+      }else {
+        document.getElementById('passwordRegister').type = 'password';
+        eye.style.visibility = 'hidden';
+        document.getElementById('hiddenEyeR').style.visibility = 'visible';
+      }
     }
+
+
+    const perdoruesiLogin = document.getElementById('usernameLogin');
+    const fjalekalimiLogin = document.getElementById('passwordLogin');
+
+    const perdoruesi = document.getElementById('usernameRegister');
+    const fjalekalimi = document.getElementById('passwordRegister');
+
+    const emailin = document.getElementById('email'); 
+    const formRegister = document.getElementById('registerForm');
+    const formLogin = document.getElementById('loginForm');
+    formRegister.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+
+        const emailValid = (email) => {
+          const emailRegex = new RegExp("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$");
+          return emailRegex.test(email.toLowerCase());
+        }
+
+        const passValid = (pass) => {
+          const passRegex = new RegExp("^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$");
+          return passRegex.test(pass);
+        }
+
+        let perdoruesiEkziston = () => {
+          // Nga databaza
+          return true;
+        } 
+
+
+        perdoruesi.style.border = perdoruesi.value === "" || !perdoruesiEkziston() ? "2px solid red" : "2px solid green";
+        fjalekalimi.style.border = fjalekalimi.value === "" || !passValid(fjalekalimi.value) ? "2px solid red" : "2px solid green";
+        emailin.style.border = emailin.value === "" || !emailValid(emailin.value) ? "2px solid red" : "2px solid green";
+    
+    })
+
+
+    formLogin.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const passValid = (pass) => {
+          // Pass nga databaze shikohet a jane te njejte me passin e dhene nga user
+        }
+
+        let perdoruesiEkziston = () => {
+          // Nga databaza
+        } 
+
+        perdoruesiLogin.style.border = perdoruesiLogin.value === "" ? "2px solid red" : "2px solid green";
+        fjalekalimiLogin.style.border = fjalekalimiLogin.value === "" ? "2px solid red" : "2px solid green";
+    
+
+    })
+
+
   </script>
 
 </body>

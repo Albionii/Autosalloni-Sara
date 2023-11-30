@@ -1,0 +1,98 @@
+p, h3, span{
+    color: white;
+}
+h1{
+	color: #f29339;
+}
+h3{
+	color: #f29339;
+}
+
+.teksti{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+
+.tekstiMeFoto{
+	width: 90%;
+	height: 700px;
+	position: absolute;
+	top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border-radius: 10px;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+	background-color: #3d3b3b;
+	
+}
+.tekstiMeFoto span{
+	display: block;
+	max-width: 500px;
+}
+img{
+	max-width: 700px;
+	border-radius: 10px;
+	/* content:url(MainPagePhotos/Photo1.jpg); */
+}
+
+@media (max-width : 1000px){
+    img{
+        max-width: 350px;
+        transition: 0.2s;
+        /* max-height: 236px; */
+    }
+    .teksti h1,span,h3{
+        font-size: medium;
+        transition: 0.2s;
+    }
+	.tekstiMeFoto{
+		height: 400px;
+		top: 40%;
+	}
+    
+
+}
+@media (max-width : 700px){
+    img{
+        max-width: 250px;
+        transition: 0.2s;
+        /* max-height: 236px; */
+    }
+    .teksti h1,span,h3{
+        font-size: small;
+        transition: 0.2s;
+    }
+
+	.tekstiMeFoto{
+		height: 300px;
+		top: 35%;
+	}
+}
+@media (max-width : 500px){
+    img{
+        max-width: 150px;
+        transition: 0.2s;
+        /* max-height: 236px; */
+    }
+    .teksti h1,span,h3{
+        font-size: xx-small;
+        transition: 0.2s;
+    }
+
+	.tekstiMeFoto{
+		height: 200px;
+		flex-direction: column;
+		top: 30%;
+	}
+
+}
