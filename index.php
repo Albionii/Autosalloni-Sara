@@ -29,17 +29,30 @@
         </nav>
     </header>
 
-    <div class="slider-div">
-      <!-- <div class="text-slider">
-        
-      </div> -->
-      <p id="p-slider">WITH OVER 20 YEARS OF EXPERIENCE</p>
-      <!-- <div class="car-div"> -->
+    <div class="slider-div" onmouseover="startHover()" onmouseout="removeHover()">
+
+      <div class="car-and-text">
+        <div>
+          <p id="p-title1">DECADES OF EXPERTISE IN AUTOMOTIVE EXCELLENCE</p>
+          <p>
+            Welcome to <i>AutoSalon Sara</i>, where automotive excellence meets decades of unparalleled expertise.
+            With over 20 years of dedicated service, we have been at the forefront of the automotive industry,
+            offering a level of knowledge and skill that sets us apart.
+          </p>
+          <br>
+          <button>About Us</button>
+        </div>
         <img src="fotot/car-slider.jpg" alt="car" id="car-slider">
-
-        <p id = "p-slider2">WE GIVE YOU TRUST AND COMFORT</p>
-      <!-- </div> -->
-
+        <div>
+          <p id = "p-title2">A PROMISE OF TRUST AND COMFORT</p>
+          <p>At <i>Sara</i>, trust and comfort are not just promises, they're the foundation of our relationship with every customer.
+             We understand that buying a car is not just a transaction; it's an experience. That's why we prioritize transparency, reliability,
+              and your peace of mind in every step of your journey with us.
+          </p>
+          <br>
+          <button>Our Products</button>
+        </div>
+      </div>
       <div class="div-dots">
         <span class = "dot" id = "dot1" onclick="leftCar()"></span>
         <span class = "dot" id = "dot2" onclick="rightCar()"></span>
@@ -109,6 +122,19 @@
             </div>
             <div class="footerDiv">
               <a class="titleFooter">Contact Us</a>
+              <div class="contact">
+                <div class="left">
+                    <img src="fotot/contact/Lokacioni.webp" alt="Lokacioni-Logo">
+                    <img src="fotot/contact/Tel.png" alt="Tel logo">
+                    <img src="fotot/contact/Email.png" alt="Email logo">
+                </div>
+                <div class="right">
+                  <p>Magjistrale, Ferizaj 70000</p>
+                  <p>+38344771777</p>
+                  <p>autosara@gmail.com</p>
+                </div>
+                
+              </div>
             </div>
             <div class="footerDiv">
               <a class="titleFooter">Follow Us</a>
@@ -132,20 +158,38 @@
     
 
     <script>
+      let hoverTimer;
+      let isLeftOn = true;
+      
+      function startHover(){
+        if (isLeftOn){
+          hoverTimer = setTimeout(rightCar, 10000);
+        }
+        else {
+          hoverTimer = setTimeout(leftCar, 10000);
+        }
+      }
+
+      function removeHover() {
+        clearTimeout(hoverTimer);
+      }
 
       function rightCar(){
         document.getElementById("dot1").style.backgroundColor = "black";
         document.getElementById("dot2").style.backgroundColor = "white";
-        let p = document.getElementById("p-slider").style; 
-        let car = document.getElementById("car-slider").style;
-        car.marginRight = "50%";
-        p.display = "none";
-
+        let slides = document.getElementsByClassName('car-and-text');
+        let slider = slides[0];
+        slider.style.marginLeft = "-100%";
+        isLeftOn = false;
       }
 
       function leftCar(){
         document.getElementById("dot2").style.backgroundColor = "black";
         document.getElementById("dot1").style.backgroundColor = "white";
+        let slides = document.getElementsByClassName('car-and-text');
+        let slider = slides[0];
+        slider.style.marginLeft = "0%";
+        isLeftOn = true;
       }
 
       let inicialNavSize = document.getElementsByTagName('header')[0].style.height;
