@@ -35,32 +35,14 @@
 </head>
 <body>
     <?php
-      $conn = require __DIR__ . '/LidhjaMeDatabaze.php';
+      $conn = include __DIR__ . '/LidhjaMeDatabaze.php';
 
 
     ?>
-    <header>
-    <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
-        <nav>
-            <ul class="nav__links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="productList.php">PRODUCTS</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li>
-                  <div class = "search-div">
-                    <input type="text" class="search_box" placeholder="Search here">
-                    <img src="fotot/search_logo.png" alt="serach box logo" class="search-logo">
-                  </div>
-                </li>
-                <li>
-                  <a href="log-in.html">
-                    <img src="fotot/user-logo.png" alt="user" class="user-logo">
-                  </a>
-                </li>
-            </ul>
-        </nav>
-        </header>
-        <main>
+    <?php
+    include 'header.php';
+    ?>
+    <main>
         <div id = "imageWholeScreen" onclick = "clearImage()">
       </div>
           <div class="tekstiMeFoto">  
@@ -85,7 +67,7 @@
                 <img class="" src="<?= $row['fotoPath']?>" alt="">
             <!-- </div> -->
 
-            <hr style = "border-top: 10px solid red;">
+            <hr style = "border-top: 10px solid red;">  
             <div class = "product-slider">
             <?php
                   $query = "SELECT * FROM fotot where nrShasise = '" .$product . "'";
