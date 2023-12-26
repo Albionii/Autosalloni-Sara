@@ -7,28 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="fotot/Sara-logo.png" alt="logo" class="logo"></a>
-        <nav>
-            <ul class="nav__links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="productList.php">PRODUCTS</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li>
-                  <div class = "search-div">
-                    <input type="text" class="search_box" placeholder="Search here">
-                    <img src="fotot/search_logo.png" alt="serach box logo" class="search-logo">
-                  </div>
-                </li>
-                <li>
-                  <a href="log-in.html">
-                    <img src="fotot/user-logo.png" alt="user" class="user-logo">
-                  </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
+    <?php 
+    include 'header.php';  
+    ?>
     <div class="slider-div" onmouseover="startHover()" onmouseout="removeHover()">
 
       <div class="car-and-text">
@@ -114,43 +95,9 @@
           </div>
         </div>
 
-        <footer>
-          <div class="upDiv">
-            <div class="footerDiv">
-              <a class="titleFooter">About SARA</a>
-              <p>Our company is on of the best if not the best because we made it. Noice</p>
-            </div>
-            <div class="footerDiv">
-              <a class="titleFooter">Contact Us</a>
-              <div class="contact">
-                <div class="left">
-                    <img src="fotot/contact/Lokacioni.webp" alt="Lokacioni-Logo">
-                    <img src="fotot/contact/Tel.png" alt="Tel logo">
-                    <img src="fotot/contact/Email.png" alt="Email logo">
-                </div>
-                <div class="right">
-                  <p>Magjistrale, Ferizaj 70000</p>
-                  <p>+38344771777</p>
-                  <p>autosara@gmail.com</p>
-                </div>
-                
-              </div>
-            </div>
-            <div class="footerDiv">
-              <a class="titleFooter">Follow Us</a>
-              <div class="social">
-                <a href="#"><img src="fotot/social/facebook.png" alt="facebook"></a>
-                <a href="#"><img src="fotot/social/instagram.png" alt="instagram"></a>
-                <a href="#"><img src="fotot/social/whatsup.png" alt="whatsup"></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="downDiv">
-            <p>Copyright © 2023 | All Rights Reserved</p>
-            <p>Designed by Abdusamed Beqiri and Albion Qerreti</p>
-          </div>
-        </footer>
+        <?php 
+        include 'footer.php';
+        ?>
       </div>
       
     </div>
@@ -205,6 +152,8 @@
 
 
     </script>
+
+    <script type="text/javascript" src="script.js"></script>
 
     
     

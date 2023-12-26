@@ -267,8 +267,7 @@ header:hover {
 
   .car-and-text div {
     width: 30%;
-    text-align: center;
-    
+    text-align: center; 
   }
 
   .car-and-text p {
@@ -801,10 +800,202 @@ header:hover {
     
 
   }
+  @media (max-width : 700px) {
+    #p-title1 {
+      color: white;
+      font-size: 10px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #f79238;
+      padding-bottom: 5px;
+    }
+    .car-and-text p {
+      font-size: 10px;
+    }
+   
+  .car-and-text div {
+    width: 80%;
+    text-align: center; 
+  }
+
+  .car-and-text div > p{
+    width: 60%;
+  }
+    #p-title2 {
+      color: white;
+      font-size: 10px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #f79238;
+      padding-bottom: 5px;
+    }
+    
+  
+
+    .carDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: stretch;
+    }
+
+    .services{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      background-color: white;
+      width: 100%;
+      height: 80%;
+
+      /* height: 500px; */
+    }
+    .services p{
+        font-size: small;
+    }
+    .services img{
+      max-width: 20%;
+    }
+    .serviceDiv {
+      height: 800px;
+    }
+    .ser {
+      max-height: 200px;
+    }
+    .carDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      background-color: white;
+      width: 100%;
+      height: 1000px;
+      
+    }
+    .car {
+      width: 280px;
+      height: 300px;
+      
+    }
+    .car p {
+      text-align: center;
+    }
+    
+
+    
+    .aboutP {
+      font-size: 10px;
+    }
+
+    .downDiv p {
+      font-size: 10px;
+    }
+
+
+
+    .nav__links li a {
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .user-logo {
+      margin-top: 3px;
+      width: 15px;
+      height: auto;
+      padding: 5px;
+      transition: 0.2s;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      transition: 0.2s;
+    }
+
+    .search-div {
+      width: 25px;
+      height: 25px;
+    }
+
+
+    .search-logo{
+      width: 13px;
+      height: 13px;
+      margin-left: 2px;
+      margin-top: 6px;
+      margin-right: 0px;
+    }
+
+    .search-div:hover > .search_box{
+      width: 68px;
+      font-size: 10px;
+      /* margin-left: 15px; */
+    }
+
+    #p-slider {
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    #car-slider {
+      height: 30%;
+      transition: 0.2s;
+    }
+
+
+    .search-div:hover{
+      width: 100px;
+    }
+
+    
+    .log-in {
+      width: 250px;
+      height: 350px;
+    }
+
+    .log-reg-btn {
+      font-size: 8px;
+    }
+
+    #hiddenEyeL {
+      width: 15px;
+    }
+  
+    #eyeShownL{
+      width: 15px;
+    }
+
+    #hiddenEyeR {
+      width: 15px;
+    }
+  
+    #eyeShownR{
+      width: 15px;
+    }
+    .footerDiv p {
+      font-size: xx-small;
+    }
+    .footerDiv{
+      width: 30%;
+    }
+
+    
+
+  }
+  
   @media (max-width : 600px) {
     .nav__links li a {
       font-size: 11px;
       transition: 0.2s;
+    }
+    .social img{
+      max-width: 100px;
+      max-height: 100px;
+    }
+    .social a{
+      max-width: 100px;
+      max-height: 100px;
     }
 
     .nav__links{
@@ -855,10 +1046,18 @@ header:hover {
       font-size: 10px;
       /* margin-left: 15px; */
     }
-
+    .nav__links li > a{
+      font-size: xx-small;
+    }
     
     .search-div:hover{
-      width: 50px;
+      width: 40px;
+    }
+    /* .nav__links li{
+        background-color: white;
+    } */
+    .search-div {
+      max-height: 10%;
     }
 
     #p-slider {
@@ -868,7 +1067,7 @@ header:hover {
 
     #car-slider {
       margin-top: 100px;
-      height: 40%;
+      height: 20%;
       transition: 0.2s;
     }
 
@@ -880,6 +1079,7 @@ header:hover {
       /* align-items: stretch;
       align-content: stretch; */
     }
+    
 
 
   }
@@ -889,5 +1089,6 @@ header:hover {
     }
     
   }
+
 
   
