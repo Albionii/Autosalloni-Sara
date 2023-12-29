@@ -15,6 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $uploadedFiles = $_FILES['files'];
 
+	$singleFoto = basename($_FILES["fotoKryesor"]["name"]);
+	$targetFilePath = $uploadDir . 'fotoKryesore.jpg';
+	if (move_uploaded_file($_FILES["fotoKryesor"]["tmp_name"], $targetFilePath)) {
+		// echo "The file " . htmlspecialchars($singleFoto) . " has been uploaded.";
+	}
 
     foreach ($uploadedFiles['name'] as $key => $fileName) {
 		$fileName = $_POST['nrShasise'] . $key . '.jpg';
@@ -26,20 +31,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		
 
         if (move_uploaded_file($tmpFile, $targetFile)) {
-            echo "File '$fileName' has been uploaded successfully.<br>";
+            // echo "File '$fileName' has been uploaded successfully.<br>";
         } else {
-            echo "Error uploading '$fileName'.<br>";
+            // echo "Error uploading '$fileName'.<br>";
         }
     }
-	//insert into productListData (nrShasise,registration_date,fotoPath,cmimi) values (123,CURRENT_DATE,'path'.'13.900')
 		$sql = "INSERT into productListData (nrShasise,registration_date,fotoPath,cmimi) VALUES 
-		('"  .$_POST['nrShasise'] . "',CURRENT_DATE,'parentCarPhotos/". $_POST['nrShasise'] ."/" . $_POST['nrShasise'] . "0.jpg','" . $_POST['cmimi'] ."')";
+		('"  .$_POST['nrShasise'] . "',CURRENT_DATE,'parentCarPhotos/". $_POST['nrShasise'] ."/fotoKryesore.jpg','" . $_POST['cmimi'] ."')";
 		$conn->query($sql);
-		//insert into parentCarData (nrShasise,titulli,mainText,vitiProdhimit,cmimi,fotoPath) 
-		//values (1234,'KERIII','tekst tekst tekst',2009,'13.900','fotoPath')
-		$sql = "INSERT into parentCarData (nrShasise,titulli,mainText,vitiProdhimit,cmimi,fotoPath) values (" . $_POST['nrShasise'] . ",'". $_POST['titulli'] ."','". $_POST['teksti']."',". $_POST['vitiProdhimit'].",'". $_POST['cmimi']."','parentCarPhotos/". $_POST['nrShasise'] ."/" . $_POST['nrShasise'] . "0.jpg')";
-		//echo "INSERT into parentCarData (nrShasise,titulli,mainText,vitiProdhimit,cmimi,fotoPath) values (" . $_POST['nrShasise'] . ",'". $_POST['titulli'] ."','". $_POST['teksti']."',". $_POST['vitiProdhimit'].",'". $_POST['cmimi']."','parentCarPhotos/". $_POST['nrShasise'] ."/" . $_POST['nrShasise'] . "0.jpg')";
+		// echo $sql;
+		$sql = "INSERT into parentCarData (nrShasise,titulli,mainText,vitiProdhimit,cmimi,fotoPath) values (" . $_POST['nrShasise'] . ",'". $_POST['titulli'] ."','". $_POST['teksti']."',". $_POST['vitiProdhimit'].",'". $_POST['cmimi']."','parentCarPhotos/". $_POST['nrShasise'] ."/fotoKryesore.jpg')";
 		$conn->query($sql);
 
+		echo '<h1> Kerri u shtua </h1>';
 }
 ?>

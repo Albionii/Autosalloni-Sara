@@ -35,6 +35,7 @@
     
 		<h1> Select the files you want to upload </h1>
 		<input type="file" name="files[]" multiple >
+		<input type="file" name="fotoKryesor">
 
 		<button type="submit" name="upload">Upload files</button>
 	</form>
