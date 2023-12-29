@@ -25,6 +25,7 @@ function hasTouch() {
 function openImage(lokacioni){
     let img = new Image();
     img.src = lokacioni;
+    print(lokacioni);
     let imagediv = document.getElementById("imageWholeScreen");
     imagediv.style.visibility = 'visible';
     document.getElementById("imageWholeScreen").appendChild(img);

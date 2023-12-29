@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="parentStyle.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="parentStyle.css">
+
 
     <!-- slick slideshow image css  -->
     <link rel="stylesheet" href="slick/slick.css">
@@ -13,63 +14,73 @@
     <link rel="stylesheet" href="slideStyle.css">
 
     <!-- slick JS slider  -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src = "slick/slick.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    
    
     <!-- initialize -->
-    <script>
-      $(document).ready(function(){
-      $('.product-slider').slick({
-        infinite: true,
-	      dots: true,
-    	  arrows: true,
-        slidesToShow: 3,
+   <script>
+    $(document).ready(function(){
+
+    $('.fototSlider').slick({
+  centerMode: true,
+  variableWidth: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
         centerMode: true,
-});
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
-
-    </script>
+    });
+   </script>
 </head>
 <body>
     <?php
-      $conn = include __DIR__ . '/LidhjaMeDatabaze.php';
-
-
-    ?>
-    <?php
-    include 'header.php';
-    ?>
-    <main>
-        <div id = "imageWholeScreen" onclick = "clearImage()">
-      </div>
-          <div class="tekstiMeFoto">  
-            <div class="teksti">
-              <?php
+      $conn = include __DIR__ . '/LidhjaMeDatabaze.php';include 'header.php';?>
+      <?php
                 
-                  if(isset($_GET['product'])){
-                    $product = $_GET['product'];
-                    $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
-                    $result = $conn->query($sql);
-                    $row = $result->fetch_assoc();
-                  }
+                if(isset($_GET['product'])){
+                  $product = $_GET['product'];
+                  $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
+                  $result = $conn->query($sql);
+                  $row = $result->fetch_assoc();
+                }
 
-              ?>
-              <h1 style="display: inline;"><?= $row['titulli'] ?></h1>
-              <span><?= $row['mainText'] ?></span>
-              <h3><?= $row['vitiProdhimit']?></h3>
-              <h3><?= $row['cmimi'] ?>$</h3>
-              
+            ?>
+
+    <div id = "imageWholeScreen" onclick = "clearImage()">
+    
+    </div>
+
+    <div class="mainProduct">
+      <div class="nameAndText">
+        <div class="image">
+            <h1><?= $row['titulli']?></h1>
+            <div class="mainImage">
+            <img src="<?= $row['fotoPath'] ?>" alt="">
             </div>
-              <!-- <div class="fotoja"> -->
-                <img class="" src="<?= $row['fotoPath']?>" alt="">
-            <!-- </div> -->
-
-            <hr style = "border-top: 10px solid red;">  
-            <div class = "product-slider">
-            <?php
+            <div class="centerSlider">
+              <div class="fototSlider">
+              <?php
                   $query = "SELECT * FROM fotot where nrShasise = '" .$product . "'";
                   $result = $conn->query($query);
                   $row = $result->fetch_assoc();
@@ -77,23 +88,121 @@
                       while($row = $result->fetch_assoc()){
                         // $row['fotoPath']
                         ?>
-                        <div class = "slide">
                         <img src="<?= $row['fotoPath'] ?>" alt="" onclick="openImage('<?= $row['fotoPath']?> ')">
-                      </div>
+                <?php } } ?>
+              </div>
+            </div>
+            
+        </div>
+        <?php
+                
+                if(isset($_GET['product'])){
+                  $product = $_GET['product'];
+                  $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
+                  $result = $conn->query($sql);
+                  $row = $result->fetch_assoc();
+                }
 
-                        <?php
-                      }
-                    }
-            
-            
             ?>
-          </div>
-          
-          </div>
-          
-          
-          </main>
-          <script type="text/javascript" src="script.js"></script>
+        <div class="text">
+          <h1> <?= $row['titulli']?></h1>
+          <h4><?= $row['mainText']?></h4>
+          <h3><?= $row['cmimi']?>$</h3>
+          <a href="tel:+38344771777"><img src="fotot/contact/Tel.png">  044-771-777</a>
+        </div>
+      </div>
+      <div id="tabelaDesign">
+        <div class="tabela">
+          <table>
+            <tbody class="tableBody">
+            <?php
+                
+                if(isset($_GET['product'])){
+                  $product = $_GET['product'];
+                  $sql = "SELECT * FROM carSpecs WHERE nrShasise = '". $product . "'";
+                  $result = $conn->query($sql);
+                  $row = $result->fetch_assoc();
+                }
+
+            ?>
+              <tr id="tableRow">
+                <td class="tableColumn1" id="tableColumn1">Prodhuesi</td>
+                <td class="tableColumn1"><?= $row['prodhuesi'] ?></td>
+              </tr>
+              <tr id="tableRow">
+                <td class="tableColumn1">Modeli</td>
+                <td class="tableColumn1"><?= $row['modeli'] ?></td>
+              </tr>
+              <tr id="tableRow">
+                <td class="tableColumn1">Shpejtesite</td>
+                <td class="tableColumn1"><?= $row['llojiShpejtesis'] ?></td>
+              </tr>
+              <tr id="tableRow">
+                <td class="tableColumn1">Kubikazha</td>
+                <td class="tableColumn1"><?= $row['motorri'] ?></td>
+              </tr>
+              
+              <tr id="tableRow">
+                <td class="tableColumn1">Kilometrat</td>
+                <td class="tableColumn1"><?= $row['kilometrat'] ?></td>
+              </tr>
+
+              <tr id="tableRow">
+                <td class="tableColumn1">Kariseria</td>
+                <td class="tableColumn1"><?= $row['llojiKariseris'] ?></td>
+              </tr>
+
+              <tr id="tableRow">
+                <td class="tableColumn1">Viti Prodhimit</td>
+                <td class="tableColumn1"><?= $row['vitiProdhimit'] ?></td>
+              </tr>
+              <tr id="tableRow">
+                <td class="tableColumn1">Karburanti</td>
+                <td class="tableColumn1"><?= $row['karburanti'] ?></td>
+              </tr>
+
+              <tr id="tableRow">
+                <td class="tableColumn1">Ps</td>
+                <td class="tableColumn1"><?= $row['Ps'] ?></td>
+              </tr>
+              <tr id="tableRow">
+                <td class="tableColumn1">Dogan</td>
+                <td class="tableColumn1"><img src="fotot/ParentLogos/<?=$row['Dogan']?>.png" alt=""></td>
+              </tr>
+
+              <tr id="tableRow">
+                <td class="tableColumn1">Regjistrim</td>
+                <td class="tableColumn1"><img src="fotot/ParentLogos/<?=$row['Regjistrim']?>.png" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
     
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    tabelaSize();
+    function tabelaSize(){
+    let widthSize = document.getElementById('tabelaDesign').clientWidth;
+    let heightSize = document.getElementById('tableColumn1').clientHeight;
+    document.getElementById('tableRow').style.width = (widthSize - 20) + 'px';
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = '.tableColumn1 { width: ' + (widthSize - 20)/2 + 'px;' + '} .tableColumn1 img{max-height: ' + heightSize + 'px;' + '}';
+    document.getElementsByTagName('head')[0].appendChild(style); 
+    
+    }
+    addEventListener("resize", (event) => {
+      tabelaSize();
+
+
+    });
+
+    // document.getElementsByClassName('tableColumn1').style.width = ((widthSize - 20)/2) + 'px';
+  </script>    
 </body>
 </html>

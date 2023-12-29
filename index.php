@@ -11,7 +11,6 @@
     include 'header.php';  
     ?>
     <div class="slider-div" onmouseover="startHover()" onmouseout="removeHover()">
-
       <div class="car-and-text">
         <div>
           <p id="p-title1">DECADES OF EXPERTISE IN AUTOMOTIVE EXCELLENCE</p>

@@ -89,6 +89,13 @@
 	align-content: space-between;
     color: lightblue;
 }
+#menu{
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+}
 .pages{
 	display: flex;
 	flex-direction: row;
@@ -159,6 +166,9 @@ button{
     margin-left: 0%;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+}
+main{
+    margin-top: 100px;
 }
 #options p{
     margin-left: 5%;

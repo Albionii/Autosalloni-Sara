@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detyra 4</title>
+    <title>Produktet</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylePL.css">
 </head>
@@ -72,97 +72,9 @@
             
         
         ?>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo1.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>24 Oct 2023</p>
-                    <p style="color: #f29339;">13,000$</p>
-                    <p>10,460 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo2.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>22 Oct 2023</p>
-                    <p style="color: #f29339;">13,000$</p>
-                    <p>14,502 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo3.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>18 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>11,906 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo4.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo5.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo6.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,800$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo7.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo8.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo9.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo10.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
-            <div class="rubrika">
-                <img src="MainPagePhotos/Photo11.jpg" alt="" class="img">
-                <div class="views_date">
-                    <p>12 Oct 2023</p>
-                    <p style="color: #f29339;">13,900$</p>
-                    <p>16,100 Views</p>
-                </div>
-            </div>
             </div>
         </div>
-        <div class="pages">
+        <!-- <div class="pages">
             <button style="background-color: #f29339; border: none;">Previous</button>
             <div class="numrat">
                 <button style="height: 30px; width: 30px; background-color: #f29339; border: inset 0px;">1</button>
@@ -171,7 +83,7 @@
                 <button style="height: 30px; width: 30px; border: inset 0px;">4</button>
             </div>
             <button style="background-color: #f29339;  border: none; ">Next</button>
-        </div>
+        </div> -->
         </main>
         <script type="text/javascript" src="productListScript.js"></script>
         <script>

@@ -18,12 +18,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     background-color: black;
     transition: 0.5s;
     position: fixed;
     z-index: 1;
     width: 98%;
+    height: 10%;
 }
 
 header:hover {
@@ -248,7 +249,7 @@ header:hover {
     margin-top: 100px;
     width: 100%;
     height: 83%;
-    background-color: black;
+    /* background-color: white; */
   
     overflow: hidden;
   }
@@ -267,7 +268,8 @@ header:hover {
 
   .car-and-text div {
     width: 30%;
-    text-align: center; 
+    text-align: center;
+    align-items: center;
   }
 
   .car-and-text p {
@@ -275,6 +277,7 @@ header:hover {
     font-size: 18px;
     margin-left: 100px;
     margin-right: 100px;
+    text-align: center;
   }
 
   .car-and-text button {
@@ -308,7 +311,11 @@ header:hover {
     border-bottom: 1px solid #f79238;
     padding-bottom: 5px;
   }
-  
+  .telefoni [href^="tel"] {
+    color: inherit; /* Inherit text color of parent element. */
+    text-decoration: none; /* Remove underline. */
+    /* Additional css `propery: value;` pairs here */
+  }
 
   
 
@@ -463,7 +470,7 @@ header:hover {
     align-content: stretch;
     background-color: white;
     height: 80%;
-    width: 200px;
+    width: 300px;
     box-shadow: 0 0 20px 10px #7f1b1b1f;
 
   }
@@ -527,7 +534,7 @@ header:hover {
     align-content: stretch;
     background-color: rgb(240, 240, 240);
     height: 90%;
-    width: 25%;
+    width: 20%;
     border-radius: 10px;
     box-shadow: 0 0 20px 10px #7f1b1b1f;
   }
@@ -545,16 +552,18 @@ header:hover {
     justify-content: space-around;
     align-items: stretch;
     width: 100%;
+    background-color: black;
   }
 
   .upDiv {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: flex-start;
     background-color: black;
-    /* height: 150px; */
+    width: 100%;
   }
 
   .footerDiv{
@@ -568,7 +577,9 @@ header:hover {
   .footerDiv p {
     margin-top: 15px;
   }
-
+  .car-and-text button{
+    padding: 12px;
+  }
   .contact {
     display: flex;
     flex-direction: row;  
@@ -696,7 +707,7 @@ header:hover {
     }
 
     #car-slider {
-      height: 70%;
+      height: 80%;
       transition: 0.2s;
     }
 
@@ -711,6 +722,18 @@ header:hover {
       transition: 0.2s;
     }
 
+    .car-and-text button{
+      padding: 8px;
+      font-size: xx-small;
+    }
+    .car-and-text div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
 
 
 
@@ -749,7 +772,6 @@ header:hover {
       margin-top: 6px;
       margin-right: 0px;
     }
-
     .search-div:hover > .search_box{
       width: 68px;
       font-size: 10px;
@@ -762,7 +784,7 @@ header:hover {
     }
 
     #car-slider {
-      height: 50%;
+      height: 60%;
       transition: 0.2s;
     }
 
@@ -803,7 +825,7 @@ header:hover {
   @media (max-width : 700px) {
     #p-title1 {
       color: white;
-      font-size: 10px;
+      font-size: 15px;
       margin-bottom: 30px;
       border-bottom: 1px solid #f79238;
       padding-bottom: 5px;
@@ -817,12 +839,14 @@ header:hover {
     text-align: center; 
   }
 
-  .car-and-text div > p{
-    width: 60%;
+  .car-and-text div > p {
+    /* background-color: #f79238; */
+    width: 80%;
+    font-size: medium;
   }
     #p-title2 {
       color: white;
-      font-size: 10px;
+      font-size: 15px;
       margin-bottom: 30px;
       border-bottom: 1px solid #f79238;
       padding-bottom: 5px;
@@ -939,7 +963,7 @@ header:hover {
     }
 
     #car-slider {
-      height: 30%;
+      height: 50%;
       transition: 0.2s;
     }
 
@@ -978,6 +1002,18 @@ header:hover {
     }
     .footerDiv{
       width: 30%;
+    }
+    .downDiv p{
+      font-size: 1%;
+    }
+    .right p > img{
+      max-height: 15px;
+    }
+    .social a > img{
+      max-height: 50px;
+    }
+    .titleFooter{
+      font-size: x-small;
     }
 
     
@@ -1069,6 +1105,7 @@ header:hover {
       margin-top: 100px;
       height: 20%;
       transition: 0.2s;
+      /* margin-left: 0%; */
     }
 
     .slider-div{

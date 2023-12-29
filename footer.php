@@ -15,7 +15,7 @@ echo '<footer>
       }
       </style>
         <p><img src="fotot/contact/Lokacioni.webp"alt="Lokacioni-Logo"> <br>Magjistrale, Ferizaj 70000</p>
-        <p><img src="fotot/contact/Tel.png" alt="Tel logo"><br>+38344771777</p>
+        <p class="telefoni" href="tel:+38344771777" style = "text-decoration: none;"><img src="fotot/contact/Tel.png" alt="Tel logo"><br>+38344771777</p>
         <p><img src="fotot/contact/Email.png" alt="Email logo"><br>autosara@gmail.com</p>
 
       </div>
