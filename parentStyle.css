@@ -233,6 +233,9 @@ img{
 
 }
 @media (max-width : 700px){
+	.nav__links li a:hover{
+		font-size: 14px;
+	  } 
 	.nameAndText{
 		flex-direction: column;
 		justify-content: space-between;
@@ -298,6 +301,9 @@ img{
 	}
 }
 @media (max-width : 500px){
+	.nav__links li a:hover{
+		font-size: x-small;
+	  } 
 	header{
 		padding-left: 15px;
 		padding-bottom: 0px;
@@ -333,4 +339,10 @@ img{
 
 
 
+}
+@media (pointer:none), (pointer:coarse){
+    .nav__links li a:hover {
+      color: #f29339;
+	  animation-play-state: paused
+    }
 }

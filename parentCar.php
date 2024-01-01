@@ -76,7 +76,7 @@
         <div class="image">
             <h1><?= $row['titulli']?></h1>
             <div class="mainImage">
-            <img src="<?= $row['fotoPath'] ?>" alt="">
+            <img src="<?= $row['fotoPath'] ?>" alt="" onerror="this.src='parentCarPhotos/noCarExample.jpg'">
             </div>
             <div class="centerSlider">
               <div class="fototSlider">
@@ -88,7 +88,7 @@
                       while($row = $result->fetch_assoc()){
                         // $row['fotoPath']
                         ?>
-                        <img src="<?= $row['fotoPath'] ?>" alt="" onclick="openImage('<?= $row['fotoPath']?> ')">
+                        <img src="<?= $row['fotoPath'] ?>" alt="SGJINDET FOTOGRAFIA" onerror="this.src='parentCarPhotos/noCarExample.jpg'" onclick="openImage('<?= $row['fotoPath']?> ')">
                 <?php } } ?>
               </div>
             </div>

@@ -271,6 +271,9 @@ input[type=number] {
 
 }
 @media (max-width : 700px){
+    .nav__links li a:hover{
+        font-size: 14px;
+      } 
     .photos img{
         max-width: 250px;
         transition: 0.2s;
@@ -300,6 +303,9 @@ input[type=number] {
     }
 }
 @media (max-width : 500px){
+    .nav__links li a:hover{
+        font-size: x-small;
+      } 
     .photos img{
         max-width: 300px;
         transition: 0.2s;
@@ -335,6 +341,14 @@ input[type=number] {
       #sideBar label{
         font-size: xx-small;
       }
+      
 
 
+}
+/* fixes animations on phone */
+@media (pointer:none), (pointer:coarse){
+    .nav__links li a:hover {
+      color: #f29339;
+      animation-play-state: paused
+    }
 }

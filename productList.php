@@ -56,7 +56,7 @@
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='rubrika'>
                             <a href = 'parentCar.php?product=" . $row['nrShasise'] . "' >
-                            <img src = '" . $row['fotoPath'] . "' alt = 'skaFoto' class = 'img'></a>
+                            <img src = '" . $row['fotoPath'] . "' onerror=\"this.src='parentCarPhotos/noCarExample.jpg';\"' class = 'img'></a>
                              <div class = 'views_date'> 
                                 <p>" . $row['registration_date'] . "</p>
                                 <p style = 'color: #f29339'>" . $row['cmimi'] . "$ </p>

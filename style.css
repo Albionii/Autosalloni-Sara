@@ -844,6 +844,9 @@ header:hover {
     width: 80%;
     font-size: medium;
   }
+  .nav__links li a:hover{
+    font-size: 14px;
+  } 
     #p-title2 {
       color: white;
       font-size: 15px;
