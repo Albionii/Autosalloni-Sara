@@ -41,6 +41,8 @@ if(isset($_GET['product'])){
     $conn->query($sql);
     $sql = "delete from fotot where nrShasise = '" . $nrShasise . "'";
     $conn->query($sql);
+    $sql = "delete from filterCar where nrShasise = '" . $nrShasise . "'";
+    $conn->query($sql);
     $dirToDel = 'parentCarPhotos/' . $nrShasise;
     removeDir($dirToDel);
    

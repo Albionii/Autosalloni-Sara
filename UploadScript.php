@@ -44,6 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$sql = "INSERT into parentCarData (nrShasise,titulli,mainText,vitiProdhimit,cmimi,fotoPath) values (" . time() . ",'". $_POST['titulli'] ."','". $_POST['teksti']."',". $_POST['vitiProdhimit'].",'". $_POST['cmimi']."','parentCarPhotos/". time() ."/fotoKryesore.jpg')";
 		$conn->query($sql);
 
+		$kilometrat = str_replace(",","",$_POST['kilometrat']);
+		$cmimi = str_replace(",","",$_POST['cmimi']);
+
+		$sql = "INSERT into filterCar values (" . time() . ",". $kilometrat . ",". $_POST['vitiProdhimit'].",".$_POST['Regjistrim'].",'". $_POST['llojiShpejtesis']."',".$cmimi.")";
+		$conn->query($sql);
+
 		echo '<h1> Kerri u shtua </h1>';
 }
 ?>
