@@ -7,6 +7,7 @@
     <title>Produktet</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylePL.css">
+    <link rel="stylesheet" href="selectStyle.css">
 </head>
 
 <body>
@@ -43,16 +44,24 @@
         $viti = $vargu[2];
     }
 
+    if($vargu[3] == ""){
+        $rks = "0 or Regjistrim = 1";
+    }else{
     $rks = $vargu[3];
-    
-    $shpejtesite = $vargu[4];
+    }
+    // $shpejtesite = $vargu[4];
+    if($vargu[4] == ""){
+        $shpejtesite = "Automatik' or llojiShpejtesis = 'Manual";
+    }else{
+        $shpejtesite = $vargu[4];
+    }
 
     $sqlFilter = "    
     select nrShasise from filterCar where (kilometrat < ".$kilometrat.")
     AND (vitiProdhimit > ".$viti." ) AND (Regjistrim = ".$rks.")
     and (llojiShpejtesis = '".$shpejtesite."') and (cmimi < ".$cmimi.") 
     ";
-    echo $sqlFilter;
+    // echo $sqlFilter;
     
 }
 
@@ -60,39 +69,106 @@
 
     ?>
     
-
-    <!-- <div class="test">
-        <img src="parentCarPhotos/NavBarPush.jpg" class="fakePhoto">
-    </div> -->
     <div class="pushDiv">
     <div id="sideBar" class="sideBar">
-        <div id="menu" onclick="filter()">|||</div>
         <div id="options">
+            <div id = "rubrikParent">
+                <div id = "child">   
+                    <div id="rubrik">
+                    <label class="select">
+                    <select name="cmimiValue" id="cmimiValue">
+                        <optgroup>
+                        <option value="">cmimi</option>
+                        <option value="5000">5000€</option>
+                        <option value="10000">10,000€</option>
+                        <option value="15000">15,000€</option>
+                        <option value="20000">20,000€</option>
+                        <option value="30000">30,000€</option>
+                        <option value="50000">50,000€</option>  
+                        </optgroup>
+                    </select>
+                    </label>
 
-            <p>qmimi:</p>
-            <input style="color:white;" id="cmimiValue" type="number" name="" class="inputLook" placeholder="Maksimum">
+                    </div>
 
-            <br>
-            <p>kilometrat:</p>
-            <input style="color:white;" id="kilometratValue" type="number" name="" class="inputLook" placeholder="Minimum">
+                    <div id="rubrik">
+                    <label class="select">
+                    
+                    <select name="kilometratValue" id="kilometratValue">
+                        <optgroup>
+                        <option value="">kilometrat</option>
+                        <option value="50000">50,000km</option>
+                        <option value="100000">100,000km</option>
+                        <option value="150000">150,000km</option>
+                        <option value="200000">200,000km</option>
+                        <option value="250000">250,000km</option>
+                        <option value="300000">300,000km</option>
+                        </optgroup>
+                    </select>
+                    </label>
 
-            <p>Viti i prodhimit:</p>
-            <input style="color:white;" type="number" name="" id="inputLook" placeholder="prej">
+                    </div>
+                    <div id="rubrik">
+                    <label class="select">
+                        <select name="inputLook" id="inputLook">
+                            <optgroup>
+                            <option value="">Viti</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value = "2011">2011</option>
+                            <option value = "2012">2012</option>
+                            <option value = "2013">2013</option>
+                            <option value = "2014">2014</option>
+                            <option value = "2015">2015</option>
+                            <option value = "2016">2016</option>
+                            <option value = "2017">2017</option>
+                            <option value = "2018">2018</option>
+                            <option value = "2019">2019</option>
+                            <option value = "2020">2020</option>
+                            <option value = "2021">2021</option>
+                            <option value = "2022">2022</option>
+                            <option value = "2023">2023</option>
+                            <option value = "2024">2024</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                    </div>
+                </div>
 
-            <p> RKS: </p>
-            <select name="rks" id="rks">
-                <option value="0">Jo</option>
-                <option value="1">Po</option>
-            </select>
+                <div id = "child">   
 
-            <p> Shpejtesite: </p>
-            <select name="Shpejtesite" id="Shpejtesite">
-                <option value="Automatik">Automatik</option>
-                <option value="Manual">Manual</option>
-            </select>
-            <br>
 
-            <button id="myButton">Filter</button>
+                                    
+                    <div id="rubrik">
+                    <label class="select">
+                    <select name="rks" id="rks">
+                        <optgroup>
+                        <option value="">Regjistrim</option>
+                        <option value="0">Jo</option>
+                        <option value="1">Po</option>
+                        </optgroup>
+                    </select>
+                    </label>
+                    </div>
+                    
+                    <div id="rubrik">
+                    <label class="select">
+
+                    <select name="Shpejtesite" id="Shpejtesite">
+                        <optgroup>
+                        <option value="">Transmisioni</option>
+                        <option value="Automatik">Automatik</option>
+                        <option value="Manual">Manual</option>
+                        </optgroup>
+                    </select>
+                    </label>
+
+                    </div>
+                </div>
+            <button id="myButton">Search</button>
+            </div>
+
         </div>
     </div>
     <main id="mainDiv">

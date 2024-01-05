@@ -1,0 +1,63 @@
+.select {
+    position: relative;
+    display: flex;
+    width: min(9rem, 50vw);
+    background: var(--background-select);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    color: black;
+  }
+  .select select {
+    flex: 1;
+    padding: 1em;
+    cursor: pointer;
+    background-color: #595959;
+    border: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: black;
+  }
+  .select:hover::after {
+    color: #f39c12;
+    -webkit-animation: bounce 0.5s infinite;
+            animation: bounce 0.5s infinite;
+  }
+  
+  @-webkit-keyframes bounce {
+    25% {
+      transform: translatey(5px);
+    }
+    75% {
+      transform: translatey(-5px);
+    }
+  }
+  
+  @keyframes bounce {
+    25% {
+      transform: translatey(5px);
+    }
+    75% {
+      transform: translatey(-5px);
+    }
+  }
+
+@media (max-width : 1000px){
+    .select{
+    width: min(7rem, 40vw);
+
+    }
+    .select select{
+        font-size: small;
+    
+        }
+}
+@media (max-width : 700px){
+    .select{
+    width: min(110%);
+
+    }
+    .select select{
+    font-size: x-small;
+
+    }
+}

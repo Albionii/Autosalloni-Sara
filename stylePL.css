@@ -72,9 +72,9 @@ header{
 	align-content: space-evenly;
 }
 .rubrika{
-    margin-right: 20px;
+    margin: 2%;
     margin-bottom: 20px;
-    margin-left: 57px;
+
     
 }
 .rubrika img{
@@ -152,20 +152,43 @@ footer{
 }
 button{
     padding: 3px;
+    color: black;
 }
 #options{
-    opacity: 1;
-    display: block;
-    left: -300px;
-    width: 15%;
-    position: absolute;
-    margin-top: 5%;
+    width: 100%;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    
 }
-#options.slideIn{
-    opacity: 1;
-    left: 0px;
+#rubrikParent{
+    width: 40%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    background-color: #1c1c1c;
+    padding: 2%;
+	border-radius: 10px;
+    margin-top: 2%;
+
+}
+#child{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    flex-flow: row wrap;
+	align-items: center;
+	align-content: space-between;
+    /* background-color: white; */
 }
 #mainDiv{
     margin-left: 0%;
@@ -188,7 +211,7 @@ main{
     border-radius: 5px;
     font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
     border: 0; 
-    width: 30%;
+    width: 20%;
 
 
 
@@ -201,9 +224,12 @@ main{
 }
 #options input{
     background-color: #252527;
-    max-width: 40%;
+    width: 40%;
+    border-style: none;
+    padding: 0;
     margin-left: 5%;
     border: none;
+    /* background-color: white; */
     
 }
 #options input::placeholder{
@@ -225,16 +251,12 @@ main{
     -webkit-transition: all 0.25s;
     position: absolute;
 }
-select{
-    background-color: #252527;
-    max-width: 40%;
-    margin-left: 5%;
-    border: none;
+
+#rubrik{
+    margin: 10px;
+    /* width: 20%; */
 }
-select{
-  appearance: menulist-button;
-  color: white;
-}
+
 .fakePhoto{
     max-height:110px; 
     z-index: 2;
@@ -255,6 +277,8 @@ input[type=number] {
     appearance: textfield;
   }
 
+
+
 @media (max-width : 1000px){
     .photos img{
         max-width: 350px;
@@ -269,24 +293,14 @@ input[type=number] {
         font-size: medium;
         transition: 0.2s;
     }
-    #options{
-        /* margin-top: 10%; */
-        width: 20%;
-    }
-    #options p {
-        font-size: medium;
-        color: white;
-        margin-top: 2%;
-    }
     #menu{
         font-size: 2em;
     }
-    #options input::placeholder{
-        color: white;
-        font-size: medium;
-    }
     header{
         max-height: 5px;
+    }
+    #rubrikParent{
+        width: 50%;
     }
     
 
@@ -308,19 +322,12 @@ input[type=number] {
         font-size: small;
         transition: 0.2s;
     }
-    #options{
-        /* margin-top: 20%; */
-        width: 25%;
-    }
-    #options p {
-        font-size: small;
-        color: white;
-    }
     #menu{  
         font-size: 1em;
     }
-    #options input::placeholder{
-        font-size: small;
+
+    #rubrikParent{
+        width: 60%;
     }
 }
 @media (max-width : 500px){
@@ -336,23 +343,8 @@ input[type=number] {
         font-size: medium;
         transition: 0.2s;
     }
-    
-    #options{
-        /* margin-top: 20%; */
-        width: 30%;
-    }
-    #options p {
-        font-size: xx-small;
-        color: white;
-    }
     #menu{
         font-size: 1em;
-    }
-    #options input{
-        max-width: 30px;
-    }
-    #options input::placeholder{
-        font-size: xx-small;
     }
     input[type="radio"] {
         -ms-transform: scale(0.5); /* IE 9 */
@@ -362,6 +354,10 @@ input[type=number] {
       #sideBar label{
         font-size: xx-small;
       }
+
+    #rubrikParent{
+        width: 70%;
+    }
       
 
 
