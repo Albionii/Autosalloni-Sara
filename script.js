@@ -23,16 +23,15 @@ function hasTouch() {
   }
   
 function openImage(lokacioni){
-    let img = new Image();
-    img.src = lokacioni;
-    print(lokacioni);
+    // let img = new Image();
+    // img.src = lokacioni;
     let imagediv = document.getElementById("imageWholeScreen");
     imagediv.style.visibility = 'visible';
-    document.getElementById("imageWholeScreen").appendChild(img);
+    // document.getElementById("mainImageWhole").appendChild(img);
 }
 function clearImage(){
     let imagediv = document.getElementById("imageWholeScreen");
-    imagediv.innerHTML = "";
+    // imagediv.innerHTML = '<div id = "x-image"><img src="fotot/ParentLogos/0.png" alt="" onclick="clearImage()" class="x-logo"></div> <div id = "mainImageWhole"> </div>';
     imagediv.style.visibility = 'hidden';
 }
 

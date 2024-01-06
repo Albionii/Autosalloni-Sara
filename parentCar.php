@@ -22,6 +22,8 @@
     <!-- initialize -->
    <script>
     $(document).ready(function(){
+    $('.mainImageWhole').slick();
+
 
     $('.fototSlider').slick({
   centerMode: true,
@@ -64,10 +66,35 @@
                   $result = $conn->query($sql);
                   $row = $result->fetch_assoc();
                 }
-
             ?>
 
-    <div id = "imageWholeScreen" onclick = "clearImage()">
+    <div id = "imageWholeScreen">
+          <div id = "x-image">
+            <img src="fotot/ParentLogos/0.png" alt="" onclick="clearImage()" class="x-logo">
+
+          </div>
+          <div id="mainImageWhole" class="mainImageWhole">
+                
+                <div class="slide">
+                    <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
+                </div>
+                <div class="slide">
+                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
+                </div>
+                <div class="slide">
+                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
+                </div>
+                <div class="slide">
+                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
+                </div>
+                <div class="slide">
+                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
+                </div>
+
+
+            
+          </div>
+
     
     </div>
 

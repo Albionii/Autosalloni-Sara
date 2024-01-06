@@ -5,7 +5,7 @@ echo '<header>
     <ul class="nav__links">
         <li><a href="index.php">HOME</a></li>
         <li><a href="productList.php">PRODUCTS</a></li>
-        <li><a href="#">ABOUT US</a></li>
+        <li><a href="AboutUs.php">ABOUT US</a></li>
         <li>
           <div class = "search-div">
             <input type="text" class="search_box" placeholder="Search here">
