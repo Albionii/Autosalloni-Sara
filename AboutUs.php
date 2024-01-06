@@ -10,8 +10,7 @@
 </head>
 <body>
     <?php 
-    include 'header.php';
-    ?>
+    include 'header.php'; require('sendMessage.php');?>
     <div class="responsive-container-block bigContainer">
         <div class="responsive-container-block Container">
             <p class="text-blk heading">
@@ -36,5 +35,42 @@
                 </div>
         </div>
     </div>
+    <div class="container">
+	    <div class="row input-container">
+            <h2 style="color: white; text-align:center;">Na Kontakto</h2>
+                <form action="" method="post">
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<input type="text" name="emri" required />
+					<label>Name</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<input type="text" name="email" required />
+					<label>Email</label> 
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input" style="float:right;">
+					<input type="text" name="numri" required />
+					<label>Phone Number</label> 
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<textarea required name="teksti"></textarea>
+					<label>Message</label>
+				</div>
+			</div>
+			<div class="col-xs-12">
+		        <button class="button-3" type="submit" name="upload">Dergo Mesazh</button>
+			</div>
+    </form>
+
+	</div>
+</div>
+
+
 </body>
 </html>
