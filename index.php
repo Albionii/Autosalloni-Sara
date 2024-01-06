@@ -21,7 +21,9 @@
             offering a level of knowledge and skill that sets us apart.
           </p>
           <br>
+          <a href="AboutUs.php">
           <button>About Us</button>
+          </a>
         </div>
         <img src="fotot/car-slider.jpg" alt="car" id="car-slider">
         <div>
@@ -31,7 +33,9 @@
               and your peace of mind in every step of your journey with us.
           </p>
           <br>
+          <a href="productList.php">
           <button>Our Products</button>
+          </a>
         </div>
       </div>
       <div class="div-dots">
