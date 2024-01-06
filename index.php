@@ -8,7 +8,8 @@
 </head>
 <body>
     <?php 
-    include 'header.php';  
+    include 'header.php';
+    $conn = include __DIR__ . '/LidhjaMeDatabaze.php';  
     ?>
     <div class="slider-div" onmouseover="startHover()" onmouseout="removeHover()">
       <div class="car-and-text">
@@ -73,24 +74,25 @@
 
         <div class="trend">
           <div class="trendSpan">
-            <span>OUR TOP 3 MOST VIEWED CARS</span>
+            <span>NEWEST CARS</span>
           </div>
           <div class="carDiv">
-            <div class="car">
-              <p>Mercedes Benz E220 2019</p>
-              <img src="MainPagePhotos/Photo5.jpg" alt="Car photo">
-              <p>28,900€</p>
-            </div>
-            <div class="car">
-              <p>BMW 535d 2014</p>
-              <img src="MainPagePhotos/Photo6.jpg" alt="Car photo">
-              <p>18,900€</p>
-            </div>
-            <div class="car">
-              <p>Audi A3 2.0d 2014</p>
-              <img src="MainPagePhotos/Photo9.jpg" alt="Car photo">
-              <p>14,300€</p>
-            </div>
+            <?php 
+              $sql = "select Pc.nrShasise,Pc.titulli,Pc.cmimi,PL.fotoPath from parentCarData Pc,productListData PL where Pc.nrShasise = PL.nrShasise ORDER by PL.nrShasise DESC LIMIT 3";
+              $result = $conn->query($sql);
+              if ($result->num_rows > 0){
+                while($row = $result->fetch_assoc()){
+                  
+                  
+            ?>
+              <div class="car">
+                <p><?=$row['titulli'] ?></p>
+                <a href="parentCar.php?product=<?= $row['nrShasise'] ?>">
+                <img src="<?=$row['fotoPath']?>" alt="">
+                </a>
+                <p><?= $row['cmimi']?></p>
+              </div>
+            <?php }} ?>
           </div>
         </div>
 
