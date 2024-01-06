@@ -58,16 +58,7 @@
 <body>
     <?php
       $conn = include __DIR__ . '/LidhjaMeDatabaze.php';include 'header.php';?>
-      <?php
-                
-                if(isset($_GET['product'])){
-                  $product = $_GET['product'];
-                  $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
-                  $result = $conn->query($sql);
-                  $row = $result->fetch_assoc();
-                }
-            ?>
-
+      
     <div id = "imageWholeScreen">
           <div id = "x-image">
             <img src="fotot/ParentLogos/0.png" alt="" onclick="clearImage()" class="x-logo">
@@ -75,21 +66,27 @@
           </div>
           <div id="mainImageWhole" class="mainImageWhole">
                 
-                <div class="slide">
-                    <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
-                </div>
-                <div class="slide">
-                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
-                </div>
-                <div class="slide">
-                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
-                </div>
-                <div class="slide">
-                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
-                </div>
-                <div class="slide">
-                  <img src="parentCarPhotos/1704122844/17041228441.jpg" alt=""> 
-                </div>
+                
+          <?php
+
+                  if(isset($_GET['product'])){
+                  $product = $_GET['product'];
+                  }
+                  $query = "SELECT * FROM fotot where nrShasise = '" .$product . "'";
+                  $result = $conn->query($query);
+                  $row = $result->fetch_assoc();
+                  $fotoArray = array();
+                      if ($result->num_rows > 0){
+                      while($row = $result->fetch_assoc()){
+                        array_push($fotoArray,$row['fotoPath']);
+                        ?>
+                        <div class="slide">
+                          <img src="<?= $row['fotoPath'] ?>">
+                        </div>
+                <?php
+               }
+              } 
+            ?>
 
 
             
@@ -97,6 +94,13 @@
 
     
     </div>
+
+    <?php
+                
+                  $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
+                  $result = $conn->query($sql);
+                  $row = $result->fetch_assoc();
+            ?>
 
     <div class="mainProduct">
       <div class="nameAndText">
@@ -108,29 +112,17 @@
             <div class="centerSlider">
               <div class="fototSlider">
               <?php
-                  $query = "SELECT * FROM fotot where nrShasise = '" .$product . "'";
-                  $result = $conn->query($query);
-                  $row = $result->fetch_assoc();
-                      if ($result->num_rows > 0){
-                      while($row = $result->fetch_assoc()){
-                        // $row['fotoPath']
+                    for($i = 0;$i<count($fotoArray);$i = $i + 1){
                         ?>
-                        <img src="<?= $row['fotoPath'] ?>" alt="SGJINDET FOTOGRAFIA" onerror="this.src='parentCarPhotos/noCarExample.jpg'" onclick="openImage('<?= $row['fotoPath']?> ')">
-                <?php } } ?>
+                        <img src="<?= $fotoArray[$i] ?>" alt="SGJINDET FOTOGRAFIA" onerror="this.src='parentCarPhotos/noCarExample.jpg'" onclick="openImage()">
+                <?php
+
+              }
+          ?>
               </div>
             </div>
             
         </div>
-        <?php
-                
-                if(isset($_GET['product'])){
-                  $product = $_GET['product'];
-                  $sql = "SELECT * FROM parentCarData WHERE nrShasise = '". $product . "'";
-                  $result = $conn->query($sql);
-                  $row = $result->fetch_assoc();
-                }
-
-            ?>
         <div class="text">
           <h1> <?= $row['titulli']?></h1>
           <h4><?= $row['mainText']?></h4>

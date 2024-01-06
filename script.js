@@ -22,7 +22,7 @@ function hasTouch() {
     } catch (ex) {}
   }
   
-function openImage(lokacioni){
+function openImage(){
     // let img = new Image();
     // img.src = lokacioni;
     let imagediv = document.getElementById("imageWholeScreen");
